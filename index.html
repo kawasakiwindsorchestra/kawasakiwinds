@@ -2,12 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>かわさきwindsオーケストラ</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="かわさきwindsオーケストラ。川崎から、心に響く音楽を。2026年の活動情報、出演情報、お知らせなどをご紹介します。">
+      content="かわさきwindsオーケストラ。音楽でつながる。川崎から、心に響く音楽を。">
+
+<title>かわさきwindsオーケストラ</title>
 
 <style>
 
@@ -22,13 +24,16 @@ html {
 body {
   margin: 0;
   font-family:
+    -apple-system,
+    BlinkMacSystemFont,
     "Noto Sans JP",
     "Yu Gothic",
     "Hiragino Kaku Gothic ProN",
+    Meiryo,
     sans-serif;
   color: #222;
-  background: #f5fbfd;
-  line-height: 1.8;
+  background: #f4fbfd;
+  line-height: 1.7;
 }
 
 /* ====================
@@ -37,146 +42,156 @@ body {
 
 header {
   background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 .header-inner {
   max-width: 1100px;
-  margin: auto;
-  padding: 12px 20px;
+  margin: 0 auto;
+  padding: 10px 18px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
 }
+
+/* ロゴ */
 
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: #0878ad;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .logo-area img {
-  width: 72px;
-  height: 72px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
   border-radius: 50%;
 }
 
-.logo-text {
-  font-size: 1.35rem;
-  font-weight: 800;
-  line-height: 1.25;
+.site-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0875ad;
+  line-height: 1.15;
+  white-space: nowrap;
 }
+
+/* ナビ */
 
 nav {
   display: flex;
-  gap: 6px;
+  align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 4px 10px;
 }
 
 nav a {
   color: #222;
   text-decoration: none;
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 3px;
+  white-space: nowrap;
 }
 
 nav a:hover {
-  background: #e8f7fc;
-  color: #0878ad;
+  color: #0875ad;
 }
 
 /* ====================
-   ヒーロー
+   メイン
 ==================== */
 
+main {
+  width: 100%;
+}
+
+/* ヒーロー */
+
 .hero {
-  background:
-    linear-gradient(
-      180deg,
-      #eaf9fd 0%,
-      #f8fdff 100%
-    );
+  min-height: 650px;
+  padding: 55px 20px 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 70px 20px 60px;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(255,255,255,0.95),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5fcff,
+      #dff7fb
+    );
+}
+
+.hero-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 28px;
 }
 
 .hero h1 {
   margin: 0;
-  color: #0878ad;
-  font-size: clamp(2.1rem, 7vw, 4.5rem);
-  font-weight: 900;
-  letter-spacing: 0.03em;
+  color: #0875ad;
+  font-size: clamp(42px, 8vw, 82px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: block;
 }
 
 .hero p {
-  margin: 18px auto 0;
-  font-size: 1.15rem;
-  font-weight: 600;
+  margin: 35px 0 0;
+  font-size: clamp(18px, 4vw, 28px);
+  line-height: 1.8;
 }
 
 /* ====================
-   共通
+   共通セクション
 ==================== */
 
 section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 70px 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 80px 20px;
 }
 
 .section-title {
   text-align: center;
-  color: #0878ad;
-  font-size: 2rem;
-  margin: 0 0 35px;
-  font-weight: 900;
+  margin-bottom: 45px;
 }
 
-.section-title::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 5px;
-  margin: 15px auto 0;
-  background: #0878ad;
-  border-radius: 10px;
+.section-title h2 {
+  margin: 0;
+  color: #0875ad;
+  font-size: clamp(28px, 6vw, 44px);
 }
 
-/* ====================
-   夏祭り写真
-==================== */
-
-.photo-card {
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.10);
-  margin: auto;
-  max-width: 900px;
-}
-
-.photo-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 250px;
-  object-fit: cover;
-}
-
-.photo-caption {
-  padding: 22px;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 700;
+.section-title .line {
+  width: 150px;
+  height: 7px;
+  background: #0875ad;
+  border-radius: 20px;
+  margin: 20px auto 0;
 }
 
 /* ====================
@@ -185,37 +200,121 @@ section {
 
 .about {
   background: #ffffff;
+  max-width: none;
 }
 
-.about-box {
-  max-width: 850px;
-  margin: auto;
+.about-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text {
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 18px;
 }
 
 /* ====================
-   カード
+   夏祭り
 ==================== */
 
-.cards {
+.event {
+  background: #eefaff;
+  max-width: none;
+}
+
+.event-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/*
+  ★ここが写真です
+  GitHubリポジトリのルートにある
+  kawasaki-summer-festival-2026.jpg
+  を直接読み込みます
+*/
+
+.event-photo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  min-height: 200px;
+
+  object-fit: contain;
+
+  border-radius: 18px;
+
+  background: #f8f8f8;
+}
+
+/* 写真タイトル */
+
+.event-title {
+  text-align: center;
+  margin: 25px 0 10px;
+
+  color: #0875ad;
+  font-size: clamp(25px, 5vw, 40px);
+  font-weight: 800;
+}
+
+/* ====================
+   出演情報
+==================== */
+
+.info-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  margin-bottom: 25px;
+}
+
+.info-box h3 {
+  color: #0875ad;
+  margin-top: 0;
+}
+
+/* ====================
+   活動
+==================== */
+
+.activities {
+  background: #f8fdff;
+  max-width: none;
+}
+
+.activities-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.activity-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 20px;
 }
 
-.card {
+.activity-item {
   background: #ffffff;
-  padding: 28px 22px;
+  padding: 25px 20px;
   border-radius: 18px;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.07);
   text-align: center;
+  box-shadow: 0 7px 20px rgba(0,0,0,0.06);
 }
 
-.card h3 {
-  color: #0878ad;
+.activity-item h3 {
+  color: #0875ad;
   margin-top: 0;
-  font-size: 1.3rem;
 }
 
 /* ====================
@@ -223,26 +322,23 @@ section {
 ==================== */
 
 .news {
-  background: #eaf8fc;
+  background: #ffffff;
 }
 
 .news-list {
   max-width: 850px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .news-item {
-  background: #ffffff;
-  margin-bottom: 12px;
-  padding: 18px 22px;
-  border-radius: 12px;
-  border-left: 5px solid #0878ad;
+  padding: 18px;
+  border-bottom: 1px solid #ddd;
 }
 
 .news-date {
-  color: #0878ad;
-  font-weight: 800;
-  margin-right: 12px;
+  color: #0875ad;
+  font-weight: bold;
+  margin-right: 15px;
 }
 
 /* ====================
@@ -250,31 +346,31 @@ section {
 ==================== */
 
 .contact {
+  background: #eaf8fc;
+  max-width: none;
+}
+
+.contact-inner {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.contact-box {
-  background: #ffffff;
-  max-width: 750px;
-  margin: auto;
-  padding: 35px 20px;
-  border-radius: 20px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-}
-
-.contact-button {
+.contact-mail {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 30px;
-  background: #0878ad;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 800;
-}
 
-.contact-button:hover {
-  opacity: 0.85;
+  padding: 15px 25px;
+
+  background: #0875ad;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 30px;
+
+  font-size: 17px;
+  font-weight: bold;
 }
 
 /* ====================
@@ -282,10 +378,10 @@ section {
 ==================== */
 
 footer {
-  background: #0878ad;
-  color: #ffffff;
+  background: #0875ad;
+  color: white;
   text-align: center;
-  padding: 35px 20px;
+  padding: 30px 15px;
 }
 
 footer p {
@@ -293,23 +389,33 @@ footer p {
 }
 
 /* ====================
-   TOPボタン
+   上へ戻るボタン
 ==================== */
 
 #topButton {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 60px;
-  height: 60px;
+
+  right: 18px;
+  bottom: 25px;
+
+  width: 65px;
+  height: 65px;
+
   border: none;
   border-radius: 50%;
-  background: #0878ad;
-  color: #ffffff;
-  font-size: 30px;
+
+  background: #0875ad;
+  color: white;
+
+  font-size: 32px;
+
   cursor: pointer;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+
   z-index: 999;
+}
+
+#topButton:hover {
+  background: #075f8d;
 }
 
 /* ====================
@@ -319,57 +425,120 @@ footer p {
 @media (max-width: 700px) {
 
   .header-inner {
-    flex-direction: column;
-    padding: 12px 10px;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .logo-area {
+    gap: 6px;
   }
 
   .logo-area img {
-    width: 62px;
-    height: 62px;
+    width: 50px;
+    height: 50px;
   }
 
-  .logo-text {
-    font-size: 1.1rem;
+  /*
+    ★上の文字を小さく
+  */
+
+  .site-name {
+    font-size: 14px;
+    line-height: 1.15;
+    white-space: normal;
+    width: 85px;
   }
 
   nav {
-    width: 100%;
+    gap: 1px 6px;
+    max-width: 230px;
   }
 
   nav a {
-    font-size: 0.9rem;
-    padding: 6px 7px;
+    font-size: 12px;
+    padding: 2px 1px;
   }
 
   .hero {
-    padding: 50px 15px;
+    min-height: 580px;
+    padding: 40px 15px 60px;
+  }
+
+  .hero-logo {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 20px;
   }
 
   .hero h1 {
-    font-size: 2.3rem;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-top: 25px;
   }
 
   section {
-    padding: 55px 15px;
+    padding: 60px 15px;
   }
 
-  .cards {
+  .event-card {
+    padding: 10px;
+  }
+
+  /*
+    ★スマホでも写真を必ず横幅いっぱいに表示
+  */
+
+  .event-photo {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .activity-list {
     grid-template-columns: 1fr;
   }
 
-  .photo-card {
-    border-radius: 15px;
-  }
-
-  .photo-card img {
-    min-height: 200px;
-  }
-
   #topButton {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
     right: 15px;
-    bottom: 15px;
+    bottom: 18px;
+    font-size: 28px;
+  }
+}
+
+/* ====================
+   さらに小さいスマホ
+==================== */
+
+@media (max-width: 420px) {
+
+  .site-name {
+    font-size: 13px;
+    width: 75px;
+  }
+
+  nav {
+    max-width: 210px;
+    gap: 0 5px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-logo {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -377,7 +546,7 @@ footer p {
 </head>
 
 
-<body>
+<body id="top">
 
 <!-- ====================
      ヘッダー
@@ -387,33 +556,44 @@ footer p {
 
   <div class="header-inner">
 
-    <a href="#home" class="logo-area">
+    <div class="logo-area">
 
       <img
         src="logo.jpg"
-        alt="かわさきwindsオーケストラ ロゴ">
+        alt="かわさきwindsオーケストラ ロゴ"
+      >
 
-      <div class="logo-text">
+      <div class="site-name">
         かわさきwinds<br>
         オーケストラ
       </div>
 
-    </a>
+    </div>
 
 
     <nav>
 
       <a href="#home">ホーム</a>
 
-      <a href="#about">私たちについて</a>
+      <a href="#about">
+        私たちについて
+      </a>
 
-      <a href="#events">出演情報</a>
+      <a href="#performance">
+        出演情報
+      </a>
 
-      <a href="#activities">活動</a>
+      <a href="#activities">
+        活動
+      </a>
 
-      <a href="#news">お知らせ</a>
+      <a href="#news">
+        お知らせ
+      </a>
 
-      <a href="#contact">お問い合わせ</a>
+      <a href="#contact">
+        お問い合わせ
+      </a>
 
     </nav>
 
@@ -423,264 +603,253 @@ footer p {
 
 
 <!-- ====================
-     トップ
+     メイン
 ==================== -->
 
-<main id="home">
-
-  <section class="hero">
-
-    <h1>
-      かわさきwindsオーケストラ
-    </h1>
-
-    <p>
-      川崎から、心に響く音楽を。
-    </p>
-
-  </section>
+<main>
 
 
-  <!-- ====================
-       夏祭り
-  ==================== -->
+<!-- ホーム -->
 
-  <section id="events">
+<section id="home" class="hero">
 
-    <h2 class="section-title">
-      かわさき夏祭り2026
-    </h2>
+  <img
+    class="hero-logo"
+    src="logo.jpg"
+    alt="かわさきwindsオーケストラ"
+  >
+
+  <h1>
+    <span>かわさき</span>
+    <span>winds</span>
+    <span>オーケストラ</span>
+  </h1>
+
+  <p>
+    音楽でつながる。<br>
+    川崎から、心に響く音楽を。
+  </p>
+
+</section>
 
 
-    <div class="photo-card">
+<!-- 私たちについて -->
 
-      <!-- ★ここが夏祭り写真です -->
+<section id="about" class="about">
 
-      <img
-        src="kawasaki-summer-festival-2026.jpg"
-        alt="かわさき夏祭り2026">
+  <div class="about-inner">
 
-      <div class="photo-caption">
-        かわさき夏祭り2026
-      </div>
+    <div class="section-title">
+
+      <h2>私たちについて</h2>
+
+      <div class="line"></div>
 
     </div>
 
-  </section>
-
-
-  <!-- ====================
-       私たちについて
-  ==================== -->
-
-  <section id="about" class="about">
-
-    <h2 class="section-title">
-      私たちについて
-    </h2>
-
-    <div class="about-box">
+    <div class="about-text">
 
       <p>
         かわさきwindsオーケストラは、
-        川崎を中心に音楽を通して地域とつながる
-        吹奏楽団です。
+        音楽を通して地域の皆さまとつながる
+        オーケストラです。
       </p>
 
       <p>
-        世代を越えて音楽を楽しみ、
-        皆さんに笑顔と感動を届けることを
-        大切にしています。
-      </p>
-
-      <p>
-        一緒に音楽を楽しみながら、
-        川崎の街をもっと盛り上げていきます。
+        川崎の街に音楽を届け、
+        子どもから大人まで楽しめる
+        演奏活動を行っています。
       </p>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- ====================
-       出演情報
-  ==================== -->
+<!-- 出演情報 -->
 
-  <section>
+<section id="performance" class="event">
 
-    <h2 class="section-title">
-      出演情報
-    </h2>
+  <div class="event-inner">
 
-    <div class="cards">
+    <div class="section-title">
 
-      <div class="card">
+      <h2>出演情報</h2>
 
-        <h3>かわさき夏祭り2026</h3>
+      <div class="line"></div>
 
-        <p>
-          川崎の夏を彩るイベントに
-          出演します。
-        </p>
-
-      </div>
+    </div>
 
 
-      <div class="card">
+    <div class="event-card">
+
+      <h3 class="event-title">
+        かわさき夏祭り2026
+      </h3>
+
+
+      <!--
+        ★★★ 重要 ★★★
+
+        このファイル名は
+        GitHubに登録した写真と完全一致しています。
+
+        kawasaki-summer-festival-2026.jpg
+      -->
+
+      <img
+        class="event-photo"
+        src="kawasaki-summer-festival-2026.jpg"
+        alt="かわさき夏祭り2026"
+        loading="eager"
+      >
+
+      <p style="text-align:center;">
+        かわさき夏祭り2026での活動です。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- 活動 -->
+
+<section id="activities" class="activities">
+
+  <div class="activities-inner">
+
+    <div class="section-title">
+
+      <h2>活動</h2>
+
+      <div class="line"></div>
+
+    </div>
+
+
+    <div class="activity-list">
+
+      <div class="activity-item">
 
         <h3>地域イベント</h3>
 
         <p>
-          地域の皆さまと一緒に
-          音楽を楽しみます。
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>今後の出演予定</h3>
-
-        <p>
-          決まり次第、
-          こちらでお知らせします。
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ====================
-       活動
-  ==================== -->
-
-  <section id="activities">
-
-    <h2 class="section-title">
-      活動
-    </h2>
-
-    <div class="cards">
-
-      <div class="card">
-
-        <h3>演奏活動</h3>
-
-        <p>
-          地域のお祭りやイベントなどで
+          川崎地域のイベントなどで
           演奏しています。
         </p>
 
       </div>
 
 
-      <div class="card">
+      <div class="activity-item">
 
-        <h3>地域交流</h3>
+        <h3>コンサート</h3>
 
         <p>
-          音楽を通して地域の皆さまと
-          交流しています。
+          皆さまに楽しんでいただける
+          コンサートを開催します。
         </p>
 
       </div>
 
 
-      <div class="card">
+      <div class="activity-item">
 
-        <h3>楽しく練習</h3>
+        <h3>音楽活動</h3>
 
         <p>
-          メンバーみんなで楽しく
-          音楽を作っています。
+          音楽を通して地域との
+          つながりを大切にしています。
         </p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- ====================
-       お知らせ
-  ==================== -->
+<!-- お知らせ -->
 
-  <section id="news" class="news">
+<section id="news" class="news">
 
-    <h2 class="section-title">
-      お知らせ
-    </h2>
+  <div class="section-title">
 
-    <div class="news-list">
+    <h2>お知らせ</h2>
 
-      <div class="news-item">
+    <div class="line"></div>
 
-        <span class="news-date">
-          2026.08
-        </span>
-
-        かわさき夏祭り2026の情報を掲載しました。
-
-      </div>
+  </div>
 
 
-      <div class="news-item">
+  <div class="news-list">
 
-        <span class="news-date">
-          2026.08
-        </span>
+    <div class="news-item">
 
-        かわさきwindsオーケストラの
-        ホームページを公開しました。
+      <span class="news-date">
+        2026
+      </span>
 
-      </div>
+      かわさきwindsオーケストラの
+      ホームページを開設しました。
 
     </div>
 
-  </section>
 
+    <div class="news-item">
 
-  <!-- ====================
-       お問い合わせ
-  ==================== -->
+      <span class="news-date">
+        2026
+      </span>
 
-  <section id="contact" class="contact">
-
-    <h2 class="section-title">
-      お問い合わせ
-    </h2>
-
-    <div class="contact-box">
-
-      <p>
-        演奏依頼・出演依頼・お問い合わせなどは
-        下記メールアドレスまでお願いいたします。
-      </p>
-
-      <p>
-        <strong>
-          kwo.info.2026@gmail.com
-        </strong>
-      </p>
-
-
-      <a
-        class="contact-button"
-        href="mailto:kwo.info.2026@gmail.com">
-
-        メールでお問い合わせ
-
-      </a>
+      かわさき夏祭り2026に出演しました。
 
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+<!-- お問い合わせ -->
+
+<section id="contact" class="contact">
+
+  <div class="contact-inner">
+
+    <div class="section-title">
+
+      <h2>お問い合わせ</h2>
+
+      <div class="line"></div>
+
+    </div>
+
+
+    <p>
+      かわさきwindsオーケストラへの
+      お問い合わせはこちらから。
+    </p>
+
+
+    <a
+      class="contact-mail"
+      href="mailto:kwo.info.2026@gmail.com"
+    >
+      メールでお問い合わせ
+    </a>
+
+  </div>
+
+</section>
+
 
 </main>
 
@@ -692,26 +861,24 @@ footer p {
 <footer>
 
   <p>
-    2026 かわさきwindsオーケストラ
+    © 2026 かわさきwindsオーケストラ
   </p>
 
   <p>
-    川崎から、心に響く音楽を。
+    音楽でつながる。川崎から、心に響く音楽を。
   </p>
 
 </footer>
 
 
-<!-- ====================
-     TOPボタン
-==================== -->
+<!-- 上へ -->
 
 <button
   id="topButton"
-  aria-label="ページのトップへ">
-
+  type="button"
+  aria-label="ページの先頭へ"
+>
   ↑
-
 </button>
 
 
