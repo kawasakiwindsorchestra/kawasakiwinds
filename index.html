@@ -1,108 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="かわさきwindsオーケストラ。川崎中学校吹奏楽部OB・OGを中心に、地域で音楽を楽しむウィンドオーケストラです。">
-<title>かわさきwindsオーケストラ</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="かわさきwindsオーケストラの公式ホームページです。">
+  <title>かわさきwindsオーケストラ</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        sans-serif;
+      color: #333;
+      background: #f8fbfc;
+      line-height: 1.8;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #1677a8;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #1677a8;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        linear-gradient(
+          rgba(230,245,250,0.88),
+          rgba(255,255,255,0.94)
+        );
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: #126d98;
+      font-size: clamp(2.1rem, 7vw, 4.5rem);
+      letter-spacing: 0.08em;
+    }
+
+    .hero p {
+      margin: 18px 0 30px;
+      font-size: 1.15rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: #1677a8;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    section h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #126d98;
+      font-size: 2rem;
+    }
+
+    .lead {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    }
+
+    .card h3 {
+      color: #1677a8;
+      margin-top: 0;
+    }
+
+    .news {
+      background: white;
+      border-radius: 16px;
+      padding: 10px 25px;
+      max-width: 800px;
+      margin: 30px auto 0;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    }
+
+    .news p {
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+      margin: 0;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: #e9f6fa;
+      padding: 40px 20px;
+      border-radius: 20px;
+    }
+
+    .email {
+      color: #1677a8;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    footer {
+      text-align: center;
+      background: #126d98;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 45px;
+      height: 45px;
+      border: 0;
+      border-radius: 50%;
+      background: #1677a8;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 0.75rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        padding: 12px;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="header">
-  <a href="#home" class="logo"><img src="logo.jpg" alt="かわさきwindsオーケストラ"></a>
-  <button class="menu" aria-label="メニュー" aria-expanded="false"><i></i><i></i><i></i></button>
-  <nav>
-    <a href="#home">HOME<small>ホーム</small></a>
-    <a href="#about">ABOUT<small>私たちについて</small></a>
-    <a href="#activity">ACTIVITY<small>活動</small></a>
-    <a href="#news">NEWS<small>お知らせ</small></a>
-    <a href="#contact">CONTACT<small>お問い合わせ</small></a>
-  </nav>
+
+<header>
+  <div class="header-inner">
+    <a href="#home" class="logo">かわさきwindsオーケストラ</a>
+
+    <nav>
+      <a href="#home">ホーム</a>
+      <a href="#about">私たちについて</a>
+      <a href="#activity">活動</a>
+      <a href="#news">お知らせ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section id="home" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-shade"></div>
-  <div class="hero-inner">
-    <p class="label">KAWASAKI WINDS ORCHESTRA</p>
-    <h1>あの日の音が、<br>もう一度。</h1>
-    <p class="lead">川崎中学校吹奏楽部で出会った仲間たちが、<br>もう一度集まって、地域で音楽を楽しんでいます。</p>
-    <a class="button light" href="#event">次回出演を見る <b>→</b></a>
-  </div>
-  <div class="scroll">SCROLL<span></span></div>
-</section>
 
-<section id="event" class="event">
-  <div class="event-copy">
-    <p class="label">NEXT EVENT</p>
-    <h2>かわさき夏祭り</h2>
-    <p class="event-intro">今年の夏は、かわさき夏祭りで演奏します。<br>お祭りのひとときを、音楽で一緒に楽しみましょう！</p>
-    <div class="event-date">
-      <strong>2026.08.15</strong><span>SAT</span>
+  <section id="home" class="hero">
+    <div>
+      <h1>かわさきwinds<br>オーケストラ</h1>
+      <p>
+        音楽でつながる。<br>
+        川崎から、心に響く音楽を。
+      </p>
+      <a href="#about" class="button">私たちについて</a>
     </div>
-    <div class="start"><b>16:10〜</b>　演奏開始予定</div>
-    <p class="place">宮城県川崎町・かわさき夏祭り<br>会場：川崎町B&G海洋センター</p>
-    <a class="official-link" href="https://kawasaki-festival.com/" target="_blank" rel="noopener">かわさき夏祭り 公式サイトを見る ↗</a>
-  </div>
-  <div class="event-card">
-    <span class="sun">SUMMER<br>FESTIVAL</span>
-    <div><b>8.15</b><small>SAT</small></div>
-    <p>16:10〜 LIVE</p>
-    <em>地域のお祭りで、一緒に音楽を。</em>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="about">
-  <div class="about-photo"><span>団員・練習風景の写真</span></div>
-  <div class="about-copy">
-    <p class="label">ABOUT US</p>
-    <h2>音楽でつながる。<br>地域で楽しむ。</h2>
-    <p>私たちは、川崎中学校吹奏楽部のOB・OGを中心に集まったウィンドオーケストラです。</p>
-    <p>学生時代に一緒に音を重ねた仲間たちが、時を越えて再び集まり、無理なく、楽しく音楽を続けています。</p>
-    <p>地域のお祭りやイベントなど、身近な場所で演奏し、聴いてくださる皆さんと一緒に楽しい時間をつくっていきたいと思っています。</p>
-  </div>
-</section>
+  <section id="about">
+    <h2>私たちについて</h2>
 
-<section id="activity" class="activity">
-  <div class="heading">
-    <p class="label">OUR ACTIVITY</p>
-    <h2>こんなところで<br>演奏しています。</h2>
-    <p>大きなコンサートだけが音楽じゃない。<br>地域の皆さんと近い距離で、音楽を楽しみます。</p>
-  </div>
-  <div class="activity-grid">
-    <article><span>01</span><h3>地域のお祭り</h3><p>お祭りの会場を、音楽でもっと楽しく。</p></article>
-    <article><span>02</span><h3>地域イベント</h3><p>身近な場所で、気軽に聴いてもらえる演奏を。</p></article>
-    <article><span>03</span><h3>みんなで音楽</h3><p>演奏する人も聴く人も、一緒に楽しめる時間を。</p></article>
-  </div>
-</section>
+    <p class="lead">
+      かわさきwindsオーケストラは、音楽を通して地域の皆さまと
+      つながり、楽しい時間を届ける吹奏楽団です。
+    </p>
 
-<section id="news" class="news">
-  <div class="heading-row"><div><p class="label">NEWS</p><h2>お知らせ</h2></div></div>
-  <div class="news-list">
-    <a href="#event"><time>2026.08.15</time><b>かわさき夏祭りに出演します！</b><span>16:10〜 演奏開始予定　→</span></a>
-    <a href="#contact"><time>2026.00.00</time><b>活動のお知らせ</b><span>詳細を見る　→</span></a>
-  </div>
-</section>
+    <div class="cards">
+      <div class="card">
+        <h3>🎵 音楽を楽しむ</h3>
+        <p>
+          一緒に演奏する仲間と、音楽の楽しさを大切にしています。
+        </p>
+      </div>
 
-<section id="contact" class="contact">
-  <p class="label">CONTACT</p>
-  <h2>一緒に音楽を<br>楽しみませんか？</h2>
-  <p>演奏についてのお問い合わせ、出演依頼、団員募集など、<br>お気軽にお問い合わせください。</p>
-  <a class="button gold" href="mailto:kwo.info.2026@gmail.com">お問い合わせ <b>→</b></a>
-</section>
+      <div class="card">
+        <h3>🌿 地域とともに</h3>
+        <p>
+          川崎の地域に根ざした活動を目指しています。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎺 仲間を募集中</h3>
+        <p>
+          一緒に音楽を楽しむ仲間を募集しています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activity">
+    <h2>活動</h2>
+
+    <p class="lead">
+      演奏会や地域イベントなど、さまざまな場所で
+      音楽をお届けしていきます。
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>演奏会</h3>
+        <p>皆さまに楽しんでいただける演奏会を開催します。</p>
+      </div>
+
+      <div class="card">
+        <h3>地域イベント</h3>
+        <p>地域のイベントにも参加していきます。</p>
+      </div>
+
+      <div class="card">
+        <h3>団員募集</h3>
+        <p>楽器を持って、一緒に音楽を楽しみませんか？</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>お知らせ</h2>
+
+    <div class="news">
+      <p>
+        <strong>2026.00.00</strong>
+       　活動のお知らせを掲載していきます。
+      </p>
+
+      <p>
+        <strong>2026.00.00</strong>
+       　演奏会・団員募集などの情報をお知らせします。
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+
+    <div class="contact-box">
+      <p>
+        演奏依頼、団員募集、その他のお問い合わせは<br>
+        下記メールアドレスまでお気軽にどうぞ。
+      </p>
+
+      <p>
+        <a
+          class="email"
+          href="mailto:kwo.info.2026@gmail.com"
+        >
+          kwo.info.2026@gmail.com
+        </a>
+      </p>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo"><img src="assets/logo.jpg" alt=""><div><b>あの日の音が、もう一度。</b><small>Kawasaki winds Orchestra</small></div></div>
-    <p>© <span id="year"></span> かわさきwindsオーケストラ</p>
-  </div>
+  <p>© 2026 かわさきwindsオーケストラ</p>
 </footer>
-<button class="top" aria-label="ページ上部へ">↑</button>
-<script src="script.js"></script>
+
+<button class="top" id="topButton" aria-label="ページ上部へ">↑</button>
+
+<script>
+  const topButton = document.getElementById("topButton");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topButton.style.display = "block";
+    } else {
+      topButton.style.display = "none";
+    }
+  });
+
+  topButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 </body>
 </html>
