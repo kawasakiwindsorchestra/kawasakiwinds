@@ -12,10 +12,6 @@ content="かわさきwindsオーケストラ。川崎中学校吹奏楽部OB・O
 
 <style>
 
-/* =========================
-   基本設定
-========================= */
-
 * {
   box-sizing: border-box;
 }
@@ -26,18 +22,14 @@ html {
 
 body {
   margin: 0;
-
   font-family:
     "Noto Sans JP",
     "Yu Gothic",
     "Hiragino Kaku Gothic ProN",
     Meiryo,
     sans-serif;
-
   color: #333;
-
   background: #f5fbfd;
-
   line-height: 1.8;
 }
 
@@ -50,61 +42,39 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   background: rgba(255,255,255,0.97);
-
   border-bottom: 1px solid #dbe8ec;
 }
 
 .header-inner {
   max-width: 1150px;
-
   margin: auto;
-
   padding: 7px 14px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 12px;
 }
 
-
-/* ロゴ */
-
 .logo-area {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
-
   flex-shrink: 0;
 }
 
 .logo-area img {
   width: 58px;
-
   height: 58px;
-
   object-fit: contain;
 }
 
 .logo-name {
   color: #0875ad;
-
   font-size: 16px;
-
   font-weight: bold;
-
   line-height: 1.2;
 }
-
-
-/* メニュー */
 
 nav {
   flex: 1;
@@ -112,39 +82,26 @@ nav {
 
 nav ul {
   list-style: none;
-
   margin: 0;
-
   padding: 0;
-
   display: flex;
-
   justify-content: flex-end;
-
   align-items: center;
-
   gap: 3px;
 }
 
 nav a {
   color: #333;
-
   text-decoration: none;
-
   font-size: 12px;
-
   font-weight: bold;
-
   padding: 4px 5px;
-
   border-radius: 6px;
-
   white-space: nowrap;
 }
 
 nav a:hover {
   color: #0875ad;
-
   background: #eefaff;
 }
 
@@ -155,35 +112,24 @@ nav a:hover {
 
 section {
   max-width: 1000px;
-
   margin: 0 auto;
-
   padding: 75px 20px;
 }
 
 .section-title {
   margin: 0;
-
   text-align: center;
-
   color: #0875ad;
-
   font-size: clamp(28px, 5vw, 42px);
-
   font-weight: 800;
-
   line-height: 1.4;
 }
 
 .section-line {
   width: 130px;
-
   height: 5px;
-
   margin: 15px auto 40px;
-
   background: #0875ad;
-
   border-radius: 20px;
 }
 
@@ -194,15 +140,10 @@ section {
 
 .hero {
   min-height: 650px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   padding: 70px 20px;
 
   background:
@@ -224,29 +165,21 @@ section {
 
 .hero-logo {
   width: 180px;
-
   height: 180px;
-
   object-fit: contain;
-
   margin-bottom: 20px;
 }
 
 .hero h1 {
   margin: 0;
-
   color: #0875ad;
-
   font-size: clamp(40px, 8vw, 75px);
-
   line-height: 1.25;
-
   font-weight: 900;
 }
 
 .hero p {
   margin: 25px 0 0;
-
   font-size: clamp(18px, 3vw, 27px);
 }
 
@@ -257,29 +190,23 @@ section {
 
 #about {
   max-width: none;
-
   background: #fff;
 }
 
 .about-inner {
   max-width: 900px;
-
   margin: auto;
 }
 
 .about-box {
   background: #fff;
-
   padding: 35px;
-
   border-radius: 22px;
-
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 }
 
 .about-box p {
   margin: 0 0 22px;
-
   font-size: 17px;
 }
 
@@ -289,101 +216,70 @@ section {
 
 
 /* =========================
-   夏祭り出演情報
+   出演情報
 ========================= */
 
 #festival {
   max-width: none;
-
   background: #eaf8fc;
 }
 
 .festival-inner {
   max-width: 950px;
-
   margin: auto;
 }
 
 .festival-card {
   background: #fff;
-
   padding: 18px;
-
   border-radius: 25px;
-
   box-shadow: 0 10px 35px rgba(0,0,0,0.08);
 }
 
-
-/* 夏祭り写真 */
-
 .festival-photo {
   display: block;
-
   width: 100%;
-
   height: auto;
-
   border-radius: 18px;
-
   object-fit: cover;
 }
 
 .festival-name {
   margin: 25px 0 10px;
-
   text-align: center;
-
   color: #0875ad;
-
   font-size: clamp(27px, 5vw, 40px);
-
   font-weight: 900;
 }
 
 .festival-date {
   text-align: center;
-
   font-size: 21px;
-
   font-weight: bold;
 }
 
 .festival-time {
   text-align: center;
-
   margin: 5px 0 20px;
-
   color: #e25b40;
-
   font-size: 26px;
-
   font-weight: 900;
 }
 
 .festival-text {
   text-align: center;
-
   font-size: 17px;
 }
 
 .festival-link {
   display: block;
-
   width: fit-content;
-
   margin: 25px auto 5px;
-
   padding: 12px 24px;
-
   color: white;
-
   background: #0875ad;
-
   border-radius: 25px;
-
   text-decoration: none;
-
   font-weight: bold;
 }
 
@@ -402,27 +298,20 @@ section {
 
 .info-grid {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 25px;
 }
 
 .info-card {
   padding: 28px;
-
   background: #f8fdff;
-
   border: 1px solid #e0eef2;
-
   border-radius: 20px;
 }
 
 .info-card h3 {
   margin-top: 0;
-
   color: #0875ad;
-
   font-size: 21px;
 }
 
@@ -437,31 +326,24 @@ section {
 
 #news {
   max-width: none;
-
   background: #f7fdff;
 }
 
 .news-inner {
   max-width: 850px;
-
   margin: auto;
 }
 
 .news-item {
   margin-bottom: 12px;
-
   padding: 18px 20px;
-
   background: white;
-
   border-radius: 12px;
 }
 
 .news-date {
   color: #0875ad;
-
   font-weight: bold;
-
   margin-right: 10px;
 }
 
@@ -472,45 +354,35 @@ section {
 
 #contact {
   max-width: none;
-
   background: #eaf8fc;
 }
 
 .contact-inner {
   max-width: 800px;
-
   margin: auto;
-
   text-align: center;
 }
 
 .contact-box {
   padding: 40px 25px;
-
   background: white;
-
   border-radius: 22px;
-
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.contact-box p {
+  margin-bottom: 25px;
 }
 
 .email-button {
   display: inline-block;
-
   margin-top: 10px;
-
   padding: 14px 25px;
-
   color: white;
-
   background: #0875ad;
-
   border-radius: 30px;
-
   text-decoration: none;
-
   font-weight: bold;
-
   word-break: break-all;
 }
 
@@ -525,13 +397,9 @@ section {
 
 footer {
   padding: 30px 15px;
-
   background: #0875ad;
-
   color: white;
-
   text-align: center;
-
   font-size: 14px;
 }
 
@@ -542,27 +410,16 @@ footer {
 
 #topButton {
   position: fixed;
-
   right: 18px;
-
   bottom: 18px;
-
   width: 58px;
-
   height: 58px;
-
   border: none;
-
   border-radius: 50%;
-
   background: #0875ad;
-
   color: white;
-
   font-size: 28px;
-
   cursor: pointer;
-
   box-shadow: 0 5px 18px rgba(0,0,0,0.2);
 }
 
@@ -575,21 +432,17 @@ footer {
 
   .header-inner {
     padding: 6px 8px;
-
     gap: 5px;
   }
 
   .logo-area img {
     width: 50px;
-
     height: 50px;
   }
 
   .logo-name {
     font-size: 11px;
-
     width: 70px;
-
     white-space: normal;
   }
 
@@ -599,19 +452,16 @@ footer {
 
   nav a {
     font-size: 9px;
-
     padding: 3px 2px;
   }
 
   .hero {
     min-height: 560px;
-
     padding: 55px 15px;
   }
 
   .hero-logo {
     width: 135px;
-
     height: 135px;
   }
 
@@ -648,13 +498,11 @@ footer {
 
   .logo-area img {
     width: 45px;
-
     height: 45px;
   }
 
   .logo-name {
     font-size: 9px;
-
     width: 62px;
   }
 
@@ -664,7 +512,6 @@ footer {
 
   .hero-logo {
     width: 115px;
-
     height: 115px;
   }
 
@@ -674,7 +521,6 @@ footer {
 }
 
 </style>
-
 </head>
 
 
@@ -688,7 +534,6 @@ footer {
 <header>
 
 <div class="header-inner">
-
 
 <div class="logo-area">
 
@@ -802,20 +647,6 @@ alt="かわさきwindsオーケストラ">
 (株)丸正精建敷地内プレハブになります。
 </p>
 
-<p>
-川崎にゆかりのある方はもちろんのこと、
-と言うより、このホームページを見た方は、
-その時点で「川崎にゆかりのある方」になりました。
-なので、老若男女音楽が好きな方、
-どなたでも入団資格がございます。笑
-</p>
-
-<p>
-興味を持たれた方は、
-以下のかわさきwindsオーケストラ公式アドレスに
-お問い合わせください。
-</p>
-
 </div>
 
 </div>
@@ -839,7 +670,6 @@ alt="かわさきwindsオーケストラ">
 
 
 <div class="festival-card">
-
 
 <img
 class="festival-photo"
@@ -885,7 +715,6 @@ rel="noopener noreferrer">
 公式サイトを見る
 
 </a>
-
 
 </div>
 
@@ -962,7 +791,7 @@ Jポップやアニメソング等、
 <p>
 川崎中学校吹奏楽部OB・OG、
 現役生を中心に、
-音楽が好きな仲間が集まっています。
+音楽を楽しむ仲間で活動しています。
 </p>
 
 </div>
@@ -1035,15 +864,8 @@ Jポップやアニメソング等、
 <div class="contact-box">
 
 <p>
-音楽が好きな方、
-川崎にゆかりのある方、
-一緒に楽しく演奏してみませんか？
-</p>
-
-<p>
-興味を持たれた方は、
-かわさきwindsオーケストラ公式アドレスまで
-お気軽にお問い合わせください。
+かわさきwindsオーケストラへの
+お問い合わせはこちらからお願いします。
 </p>
 
 
@@ -1107,7 +929,6 @@ behavior: "smooth"
 });
 
 </script>
-
 
 </body>
 </html>
