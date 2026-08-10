@@ -29,7 +29,7 @@ body{
     sans-serif;
   color:#222;
   background:#fff;
-  line-height:1.9;
+  line-height:1.75;
 }
 
 /* =========================
@@ -47,31 +47,31 @@ header{
 .header-inner{
   max-width:1200px;
   margin:0 auto;
-  padding:18px 25px;
+  padding:12px 20px;
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:25px;
 }
 
 .logo-area{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:12px;
   flex-shrink:0;
 }
 
 .logo-area img{
-  width:110px;
-  height:110px;
+  width:85px;
+  height:85px;
   object-fit:contain;
+  display:block;
 }
 
 .site-name{
   color:#0878aa;
   font-weight:700;
-  font-size:26px;
-  line-height:1.25;
-  letter-spacing:.02em;
+  font-size:21px;
+  line-height:1.2;
 }
 
 nav{
@@ -84,13 +84,13 @@ nav ul{
   margin:0;
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:18px;
 }
 
 nav a{
   text-decoration:none;
   color:#222;
-  font-size:17px;
+  font-size:15px;
   font-weight:600;
   white-space:nowrap;
 }
@@ -104,33 +104,33 @@ nav a:hover{
 ========================= */
 
 section{
-  padding:90px 20px;
+  padding:70px 20px;
 }
 
 .section-inner{
-  max-width:1000px;
+  max-width:950px;
   margin:0 auto;
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:55px;
+  margin-bottom:40px;
 }
 
 .section-title h2{
   margin:0;
   color:#0878aa;
-  font-size:46px;
+  font-size:38px;
   font-weight:700;
   line-height:1.3;
 }
 
 .line{
-  width:155px;
-  height:8px;
+  width:130px;
+  height:7px;
   background:#0878aa;
   border-radius:10px;
-  margin:28px auto 0;
+  margin:20px auto 0;
 }
 
 /* =========================
@@ -138,36 +138,42 @@ section{
 ========================= */
 
 #home{
-  min-height:650px;
-  padding:90px 20px 100px;
+  min-height:620px;
+  padding:75px 20px 85px;
   background:
-    radial-gradient(circle at 20% 30%, #fff 0, #eafaff 45%, #dff8f5 100%);
+    radial-gradient(
+      circle at 20% 30%,
+      #fff 0,
+      #eafaff 45%,
+      #dff8f5 100%
+    );
   text-align:center;
 }
 
 .home-logo{
-  width:250px;
-  max-width:70%;
-  margin:0 auto 35px;
+  width:200px;
+  max-width:65%;
+  margin:0 auto 25px;
 }
 
 .home-logo img{
   width:100%;
   height:auto;
+  display:block;
   object-fit:contain;
 }
 
 .home-title{
   color:#0878aa;
-  font-size:64px;
+  font-size:52px;
   font-weight:800;
   line-height:1.3;
-  margin:0 auto 35px;
+  margin:0 auto 25px;
 }
 
 .home-subtitle{
-  font-size:25px;
-  line-height:2;
+  font-size:19px;
+  line-height:1.8;
   margin:0;
 }
 
@@ -180,10 +186,10 @@ section{
 }
 
 .about-text{
-  max-width:850px;
+  max-width:800px;
   margin:0 auto;
   text-align:center;
-  font-size:21px;
+  font-size:18px;
 }
 
 /* =========================
@@ -199,33 +205,71 @@ section{
   margin:0 auto;
   background:#fff;
   border-radius:22px;
-  padding:40px 35px;
+  padding:30px 25px 35px;
   box-shadow:0 8px 25px rgba(0,0,0,.07);
   text-align:center;
 }
 
 .performance-box h3{
-  margin:0 0 25px;
+  margin:0 0 18px;
   color:#0878aa;
-  font-size:30px;
+  font-size:27px;
+  line-height:1.4;
 }
 
 .performance-date{
-  font-size:25px;
+  font-size:20px;
   font-weight:700;
-  margin:10px 0;
+  margin:8px 0;
 }
 
 .performance-place{
-  font-size:23px;
-  margin:10px 0;
+  font-size:19px;
+  margin:8px 0;
 }
 
 .performance-time{
   color:#0878aa;
-  font-size:27px;
+  font-size:22px;
   font-weight:700;
-  margin-top:18px;
+  margin:12px 0 25px;
+}
+
+/* =========================
+   出演情報の夏祭り写真
+========================= */
+
+.performance-photo{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+}
+
+.performance-photo a{
+  display:block;
+  text-decoration:none;
+}
+
+.performance-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:700px;
+  object-fit:contain;
+  border-radius:16px;
+  cursor:pointer;
+  transition:opacity .2s ease, transform .2s ease;
+}
+
+.performance-photo img:hover{
+  opacity:.9;
+  transform:scale(1.01);
+}
+
+.photo-note{
+  margin:10px 0 0;
+  font-size:14px;
+  color:#666;
 }
 
 /* =========================
@@ -237,48 +281,21 @@ section{
 }
 
 .activity-box{
-  max-width:850px;
+  max-width:800px;
   margin:0 auto;
 }
 
 .activity-item{
-  padding:22px 0;
+  padding:17px 0;
   border-bottom:1px solid #ddd;
-  font-size:20px;
+  font-size:17px;
 }
 
 .activity-item strong{
   display:block;
   color:#0878aa;
-  font-size:23px;
-  margin-bottom:5px;
-}
-
-/* =========================
-   夏祭り写真
-========================= */
-
-.photo-box{
-  max-width:900px;
-  margin:0 auto;
-  background:#f4fcff;
-  border-radius:28px;
-  padding:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.photo-box a{
-  display:block;
-  text-decoration:none;
-}
-
-.photo-box img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:900px;
-  object-fit:contain;
-  border-radius:18px;
+  font-size:19px;
+  margin-bottom:3px;
 }
 
 /* =========================
@@ -290,25 +307,25 @@ section{
 }
 
 .contact-box{
-  max-width:850px;
+  max-width:800px;
   margin:0 auto;
   background:#fff;
   border-radius:22px;
-  padding:40px 35px;
+  padding:32px 25px;
   box-shadow:0 8px 25px rgba(0,0,0,.06);
   text-align:center;
 }
 
 .contact-text{
-  font-size:21px;
-  line-height:2;
-  margin:0 0 30px;
+  font-size:18px;
+  line-height:1.9;
+  margin:0 0 25px;
 }
 
 .email{
   display:inline-block;
   color:#0878aa;
-  font-size:22px;
+  font-size:19px;
   font-weight:700;
   text-decoration:none;
   word-break:break-all;
@@ -326,23 +343,24 @@ footer{
   background:#0878aa;
   color:#fff;
   text-align:center;
-  padding:35px 20px;
+  padding:28px 20px;
 }
 
 footer p{
-  margin:5px 0;
+  margin:4px 0;
+  font-size:14px;
 }
 
 /* =========================
-   戻るボタン
+   ページトップ
 ========================= */
 
 #to-top{
   position:fixed;
-  right:25px;
-  bottom:25px;
-  width:70px;
-  height:70px;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
   border-radius:50%;
   background:#0878aa;
   color:#fff;
@@ -350,7 +368,7 @@ footer p{
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  font-size:40px;
+  font-size:32px;
   line-height:1;
   box-shadow:0 5px 15px rgba(0,0,0,.2);
   z-index:999;
@@ -363,141 +381,13 @@ footer p{
 @media(max-width:800px){
 
   .header-inner{
-    padding:12px 15px;
-    gap:12px;
+    padding:8px 12px;
+    gap:10px;
     overflow-x:auto;
   }
 
   .logo-area{
-    gap:10px;
-  }
-
-  .logo-area img{
-    width:75px;
-    height:75px;
-  }
-
-  .site-name{
-    font-size:20px;
-    line-height:1.25;
-  }
-
-  nav ul{
-    gap:15px;
-  }
-
-  nav a{
-    font-size:15px;
-  }
-
-  section{
-    padding:65px 15px;
-  }
-
-  .section-title{
-    margin-bottom:40px;
-  }
-
-  .section-title h2{
-    font-size:36px;
-  }
-
-  .line{
-    width:130px;
-    height:7px;
-  }
-
-  #home{
-    min-height:auto;
-    padding:65px 15px 75px;
-  }
-
-  .home-logo{
-    width:190px;
-    margin-bottom:25px;
-  }
-
-  .home-title{
-    font-size:43px;
-    line-height:1.45;
-  }
-
-  .home-subtitle{
-    font-size:20px;
-  }
-
-  .about-text{
-    font-size:18px;
-    text-align:left;
-  }
-
-  .performance-box{
-    padding:28px 20px;
-  }
-
-  .performance-box h3{
-    font-size:25px;
-  }
-
-  .performance-date{
-    font-size:21px;
-  }
-
-  .performance-place{
-    font-size:20px;
-  }
-
-  .performance-time{
-    font-size:23px;
-  }
-
-  .activity-item{
-    font-size:18px;
-  }
-
-  .activity-item strong{
-    font-size:21px;
-  }
-
-  .photo-box{
-    padding:12px;
-    border-radius:20px;
-  }
-
-  .photo-box img{
-    border-radius:12px;
-  }
-
-  .contact-box{
-    padding:30px 20px;
-  }
-
-  .contact-text{
-    font-size:18px;
-  }
-
-  .email{
-    font-size:18px;
-  }
-
-  #to-top{
-    width:62px;
-    height:62px;
-    right:18px;
-    bottom:18px;
-    font-size:35px;
-  }
-
-}
-
-/* =========================
-   さらに小さい画面
-========================= */
-
-@media(max-width:480px){
-
-  .site-name{
-    font-size:18px;
+    gap:8px;
   }
 
   .logo-area img{
@@ -505,20 +395,150 @@ footer p{
     height:65px;
   }
 
+  .site-name{
+    font-size:16px;
+  }
+
+  nav{
+    margin-left:auto;
+    max-width:55%;
+    overflow-x:auto;
+  }
+
   nav ul{
     gap:12px;
+    flex-wrap:nowrap;
   }
 
   nav a{
-    font-size:14px;
+    font-size:13px;
   }
 
-  .home-title{
-    font-size:38px;
+  section{
+    padding:55px 15px;
+  }
+
+  .section-title{
+    margin-bottom:32px;
   }
 
   .section-title h2{
     font-size:32px;
+  }
+
+  .line{
+    width:115px;
+    height:6px;
+    margin-top:16px;
+  }
+
+  #home{
+    min-height:580px;
+    padding:55px 15px 65px;
+  }
+
+  .home-logo{
+    width:165px;
+    margin-bottom:20px;
+  }
+
+  .home-title{
+    font-size:42px;
+    line-height:1.4;
+  }
+
+  .home-subtitle{
+    font-size:17px;
+  }
+
+  .about-text{
+    font-size:17px;
+    text-align:left;
+  }
+
+  .performance-box{
+    padding:25px 15px 30px;
+  }
+
+  .performance-box h3{
+    font-size:24px;
+  }
+
+  .performance-date{
+    font-size:18px;
+  }
+
+  .performance-place{
+    font-size:17px;
+  }
+
+  .performance-time{
+    font-size:20px;
+  }
+
+  .performance-photo img{
+    border-radius:12px;
+  }
+
+  .photo-note{
+    font-size:13px;
+  }
+
+  .activity-item{
+    font-size:16px;
+  }
+
+  .activity-item strong{
+    font-size:18px;
+  }
+
+  .contact-box{
+    padding:27px 18px;
+  }
+
+  .contact-text{
+    font-size:16px;
+  }
+
+  .email{
+    font-size:17px;
+  }
+
+  #to-top{
+    width:55px;
+    height:55px;
+    right:15px;
+    bottom:15px;
+    font-size:30px;
+  }
+
+}
+
+/* =========================
+   小さいスマホ
+========================= */
+
+@media(max-width:480px){
+
+  .logo-area img{
+    width:58px;
+    height:58px;
+  }
+
+  .site-name{
+    font-size:15px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .home-title{
+    font-size:36px;
+  }
+
+  .section-title h2{
+    font-size:29px;
   }
 
 }
@@ -539,7 +559,6 @@ footer p{
 
     <div class="logo-area">
 
-      <!-- ロゴ -->
       <img
         src="logo.png"
         alt="かわさきwindsオーケストラ"
@@ -571,10 +590,6 @@ footer p{
 
         <li>
           <a href="#activity">活動情報</a>
-        </li>
-
-        <li>
-          <a href="#festival">夏祭り</a>
         </li>
 
         <li>
@@ -673,17 +688,48 @@ footer p{
         かわさき夏祭り2026
       </h3>
 
+
       <p class="performance-date">
         2026年8月15日(土)
       </p>
+
 
       <p class="performance-place">
         川崎B&amp;G
       </p>
 
+
       <p class="performance-time">
         16時10分出演予定！
       </p>
+
+
+      <!--
+        夏祭り写真
+        写真をタップすると公式サイトへ移動
+      -->
+
+      <div class="performance-photo">
+
+        <a
+          href="https://kawasaki-festival.com/"
+          aria-label="かわさき夏祭り2026公式サイトを見る"
+        >
+
+          <img
+            src="kawasaki-summer-festival-2026.jpg"
+            alt="かわさき夏祭り2026"
+            loading="eager"
+          >
+
+        </a>
+
+
+        <p class="photo-note">
+          写真をタップすると「かわさき夏祭り2026」の公式サイトへ移動します。
+        </p>
+
+      </div>
 
     </div>
 
@@ -710,6 +756,7 @@ footer p{
 
 
     <div class="activity-box">
+
 
       <div class="activity-item">
 
@@ -738,49 +785,6 @@ footer p{
 
       </div>
 
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     夏祭り
-========================= -->
-
-<section id="festival">
-
-  <div class="section-inner">
-
-    <div class="section-title">
-
-      <h2>かわさき夏祭り2026</h2>
-
-      <div class="line"></div>
-
-    </div>
-
-
-    <div class="photo-box">
-
-      <!--
-        この写真をタッチすると
-        かわさき夏祭り公式サイトへ移動します。
-      -->
-
-      <a
-        href="https://kawasaki-festival.com/"
-        aria-label="かわさき夏祭り2026公式サイトを見る"
-      >
-
-        <img
-          src="kawasaki-summer-festival-2026.jpg"
-          alt="かわさき夏祭り2026"
-          loading="eager"
-        >
-
-      </a>
 
     </div>
 
