@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,10 @@ content="かわさきwindsオーケストラ。川崎中学校吹奏楽部OB・O
 
 <style>
 
+/* =========================
+   基本設定
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -21,14 +26,18 @@ html {
 
 body {
   margin: 0;
+
   font-family:
     "Noto Sans JP",
     "Yu Gothic",
     "Hiragino Kaku Gothic ProN",
     Meiryo,
     sans-serif;
+
   color: #333;
+
   background: #f5fbfd;
+
   line-height: 1.8;
 }
 
@@ -41,39 +50,61 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+
   background: rgba(255,255,255,0.97);
+
   border-bottom: 1px solid #dbe8ec;
 }
 
 .header-inner {
   max-width: 1150px;
+
   margin: auto;
+
   padding: 7px 14px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 12px;
 }
 
+
+/* ロゴ */
+
 .logo-area {
   display: flex;
+
   align-items: center;
+
   gap: 7px;
+
   flex-shrink: 0;
 }
 
 .logo-area img {
   width: 58px;
+
   height: 58px;
+
   object-fit: contain;
 }
 
 .logo-name {
   color: #0875ad;
+
   font-size: 16px;
+
   font-weight: bold;
+
   line-height: 1.2;
 }
+
+
+/* メニュー */
 
 nav {
   flex: 1;
@@ -81,26 +112,39 @@ nav {
 
 nav ul {
   list-style: none;
+
   margin: 0;
+
   padding: 0;
+
   display: flex;
+
   justify-content: flex-end;
+
   align-items: center;
+
   gap: 3px;
 }
 
 nav a {
   color: #333;
+
   text-decoration: none;
+
   font-size: 12px;
+
   font-weight: bold;
+
   padding: 4px 5px;
+
   border-radius: 6px;
+
   white-space: nowrap;
 }
 
 nav a:hover {
   color: #0875ad;
+
   background: #eefaff;
 }
 
@@ -111,24 +155,35 @@ nav a:hover {
 
 section {
   max-width: 1000px;
+
   margin: 0 auto;
+
   padding: 75px 20px;
 }
 
 .section-title {
   margin: 0;
+
   text-align: center;
+
   color: #0875ad;
+
   font-size: clamp(28px, 5vw, 42px);
+
   font-weight: 800;
+
   line-height: 1.4;
 }
 
 .section-line {
   width: 130px;
+
   height: 5px;
+
   margin: 15px auto 40px;
+
   background: #0875ad;
+
   border-radius: 20px;
 }
 
@@ -139,10 +194,15 @@ section {
 
 .hero {
   min-height: 650px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   text-align: center;
+
   padding: 70px 20px;
 
   background:
@@ -164,21 +224,29 @@ section {
 
 .hero-logo {
   width: 180px;
+
   height: 180px;
+
   object-fit: contain;
+
   margin-bottom: 20px;
 }
 
 .hero h1 {
   margin: 0;
+
   color: #0875ad;
+
   font-size: clamp(40px, 8vw, 75px);
+
   line-height: 1.25;
+
   font-weight: 900;
 }
 
 .hero p {
   margin: 25px 0 0;
+
   font-size: clamp(18px, 3vw, 27px);
 }
 
@@ -189,23 +257,29 @@ section {
 
 #about {
   max-width: none;
+
   background: #fff;
 }
 
 .about-inner {
   max-width: 900px;
+
   margin: auto;
 }
 
 .about-box {
   background: #fff;
+
   padding: 35px;
+
   border-radius: 22px;
+
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 }
 
 .about-box p {
   margin: 0 0 22px;
+
   font-size: 17px;
 }
 
@@ -215,127 +289,101 @@ section {
 
 
 /* =========================
-   楽しく活動
-========================= */
-
-#activity {
-  max-width: none;
-  background: #f7fdff;
-}
-
-.activity-inner {
-  max-width: 900px;
-  margin: auto;
-}
-
-.activity-box {
-  background: #fff;
-  padding: 35px;
-  border-radius: 22px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-}
-
-.activity-box p {
-  margin: 0 0 25px;
-  font-size: 17px;
-}
-
-.activity-place {
-  margin: 25px 0;
-  padding: 20px 25px;
-  background: #eefaff;
-  border-left: 5px solid #0875ad;
-  border-radius: 10px;
-}
-
-.activity-place p {
-  margin: 5px 0 0;
-}
-
-
-/* =========================
-   団員募集
-========================= */
-
-.recruit-box {
-  margin-top: 30px;
-  padding: 25px;
-  background: #f3fbfd;
-  border-radius: 16px;
-}
-
-.recruit-title {
-  margin-top: 0;
-  color: #0875ad;
-  font-size: 24px;
-}
-
-
-/* =========================
-   お祭り
+   夏祭り出演情報
 ========================= */
 
 #festival {
   max-width: none;
+
   background: #eaf8fc;
 }
 
 .festival-inner {
   max-width: 950px;
+
   margin: auto;
 }
 
 .festival-card {
   background: #fff;
+
   padding: 18px;
+
   border-radius: 25px;
+
   box-shadow: 0 10px 35px rgba(0,0,0,0.08);
 }
 
+
+/* 夏祭り写真 */
+
 .festival-photo {
   display: block;
+
   width: 100%;
+
   height: auto;
+
   border-radius: 18px;
+
   object-fit: cover;
 }
 
 .festival-name {
   margin: 25px 0 10px;
+
   text-align: center;
+
   color: #0875ad;
+
   font-size: clamp(27px, 5vw, 40px);
+
   font-weight: 900;
 }
 
 .festival-date {
   text-align: center;
+
   font-size: 21px;
+
   font-weight: bold;
 }
 
 .festival-time {
   text-align: center;
+
   margin: 5px 0 20px;
+
   color: #e25b40;
+
   font-size: 26px;
+
   font-weight: 900;
 }
 
 .festival-text {
   text-align: center;
+
   font-size: 17px;
 }
 
 .festival-link {
   display: block;
+
   width: fit-content;
+
   margin: 25px auto 5px;
+
   padding: 12px 24px;
+
   color: white;
+
   background: #0875ad;
+
   border-radius: 25px;
+
   text-decoration: none;
+
   font-weight: bold;
 }
 
@@ -354,20 +402,27 @@ section {
 
 .info-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 25px;
 }
 
 .info-card {
   padding: 28px;
+
   background: #f8fdff;
+
   border: 1px solid #e0eef2;
+
   border-radius: 20px;
 }
 
 .info-card h3 {
   margin-top: 0;
+
   color: #0875ad;
+
   font-size: 21px;
 }
 
@@ -382,24 +437,31 @@ section {
 
 #news {
   max-width: none;
+
   background: #f7fdff;
 }
 
 .news-inner {
   max-width: 850px;
+
   margin: auto;
 }
 
 .news-item {
   margin-bottom: 12px;
+
   padding: 18px 20px;
+
   background: white;
+
   border-radius: 12px;
 }
 
 .news-date {
   color: #0875ad;
+
   font-weight: bold;
+
   margin-right: 10px;
 }
 
@@ -410,31 +472,45 @@ section {
 
 #contact {
   max-width: none;
+
   background: #eaf8fc;
 }
 
 .contact-inner {
   max-width: 800px;
+
   margin: auto;
+
   text-align: center;
 }
 
 .contact-box {
   padding: 40px 25px;
+
   background: white;
+
   border-radius: 22px;
+
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 }
 
 .email-button {
   display: inline-block;
+
   margin-top: 10px;
+
   padding: 14px 25px;
+
   color: white;
+
   background: #0875ad;
+
   border-radius: 30px;
+
   text-decoration: none;
+
   font-weight: bold;
+
   word-break: break-all;
 }
 
@@ -449,9 +525,13 @@ section {
 
 footer {
   padding: 30px 15px;
+
   background: #0875ad;
+
   color: white;
+
   text-align: center;
+
   font-size: 14px;
 }
 
@@ -462,16 +542,27 @@ footer {
 
 #topButton {
   position: fixed;
+
   right: 18px;
+
   bottom: 18px;
+
   width: 58px;
+
   height: 58px;
+
   border: none;
+
   border-radius: 50%;
+
   background: #0875ad;
+
   color: white;
+
   font-size: 28px;
+
   cursor: pointer;
+
   box-shadow: 0 5px 18px rgba(0,0,0,0.2);
 }
 
@@ -484,17 +575,21 @@ footer {
 
   .header-inner {
     padding: 6px 8px;
+
     gap: 5px;
   }
 
   .logo-area img {
     width: 50px;
+
     height: 50px;
   }
 
   .logo-name {
     font-size: 11px;
+
     width: 70px;
+
     white-space: normal;
   }
 
@@ -504,16 +599,19 @@ footer {
 
   nav a {
     font-size: 9px;
+
     padding: 3px 2px;
   }
 
   .hero {
     min-height: 560px;
+
     padding: 55px 15px;
   }
 
   .hero-logo {
     width: 135px;
+
     height: 135px;
   }
 
@@ -525,13 +623,11 @@ footer {
     padding: 60px 15px;
   }
 
-  .about-box,
-  .activity-box {
+  .about-box {
     padding: 25px 20px;
   }
 
-  .about-box p,
-  .activity-box p {
+  .about-box p {
     font-size: 16px;
   }
 
@@ -552,11 +648,13 @@ footer {
 
   .logo-area img {
     width: 45px;
+
     height: 45px;
   }
 
   .logo-name {
     font-size: 9px;
+
     width: 62px;
   }
 
@@ -566,6 +664,7 @@ footer {
 
   .hero-logo {
     width: 115px;
+
     height: 115px;
   }
 
@@ -575,6 +674,7 @@ footer {
 }
 
 </style>
+
 </head>
 
 
@@ -588,6 +688,7 @@ footer {
 <header>
 
 <div class="header-inner">
+
 
 <div class="logo-area">
 
@@ -607,13 +708,29 @@ alt="かわさきwindsオーケストラ ロゴ">
 
 <ul>
 
-<li><a href="#top">ホーム</a></li>
-<li><a href="#about">私たちについて</a></li>
-<li><a href="#activity">楽しく活動</a></li>
-<li><a href="#festival">出演情報</a></li>
-<li><a href="#information">活動情報</a></li>
-<li><a href="#news">お知らせ</a></li>
-<li><a href="#contact">お問い合わせ</a></li>
+<li>
+<a href="#top">ホーム</a>
+</li>
+
+<li>
+<a href="#about">私たちについて</a>
+</li>
+
+<li>
+<a href="#festival">出演情報</a>
+</li>
+
+<li>
+<a href="#information">活動情報</a>
+</li>
+
+<li>
+<a href="#news">お知らせ</a>
+</li>
+
+<li>
+<a href="#contact">お問い合わせ</a>
+</li>
 
 </ul>
 
@@ -670,98 +787,34 @@ alt="かわさきwindsオーケストラ">
 <div class="about-box">
 
 <p>
-かわさきwindsオーケストラは、
 川崎中学校吹奏楽部OB・OG、現役生で構成された、
 できたてほやほやの吹奏楽団です。
 </p>
 
 <p>
-川崎にゆかりのある仲間たちが集まり、
-世代を越えて音楽を楽しみながら、
-一緒に活動しています。
-</p>
-
-<p>
-Jポップやアニメソング等、
-みんなが知っている曲、楽しめる曲を中心に、
-集まったメンバーで楽しく演奏しています。
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     楽しく活動
-========================= -->
-
-<section id="activity">
-
-<div class="activity-inner">
-
-<h2 class="section-title">
-楽しく活動
-</h2>
-
-<div class="section-line"></div>
-
-
-<div class="activity-box">
-
-<p>
-川崎中学校吹奏楽部OB・OG、現役生で構成された、
-できたてほやほやの吹奏楽団です。
-月2回程度(土・日17時～19時不定期)ではありますが、
+月2回程度（土・日17時～19時不定期）ではありますが、
 集まったメンバーでJポップやアニメソング等、
-楽しく演奏活動してます。
+楽しく演奏活動しています。
 </p>
 
-
-<div class="activity-place">
-
-<strong>活動場所</strong>
-
 <p>
+活動場所は、
 (株)丸正精建敷地内プレハブになります。
 </p>
-
-</div>
-
-
-<div class="recruit-box">
-
-<h3 class="recruit-title">
-🎺 団員募集
-</h3>
 
 <p>
 川崎にゆかりのある方はもちろんのこと、
 と言うより、このホームページを見た方は、
-その時点で｢川崎にゆかりのある方｣になりました。
+その時点で「川崎にゆかりのある方」になりました。
 なので、老若男女音楽が好きな方、
-どなたでも入団資格がごさいます。笑
+どなたでも入団資格がございます。笑
 </p>
 
 <p>
-興味を持たれた方は、以下のかわさきwindsオーケストラ公式アドレスにお問い合わせください。
+興味を持たれた方は、
+以下のかわさきwindsオーケストラ公式アドレスに
+お問い合わせください。
 </p>
-
-<p style="text-align:center;">
-
-<a
-class="email-button"
-href="mailto:kwo.info.2026@gmail.com">
-
-kwo.info.2026@gmail.com
-
-</a>
-
-</p>
-
-</div>
 
 </div>
 
@@ -771,7 +824,7 @@ kwo.info.2026@gmail.com
 
 
 <!-- =========================
-     かわさき夏祭り
+     かわさき夏祭り2026
 ========================= -->
 
 <section id="festival">
@@ -788,18 +841,10 @@ kwo.info.2026@gmail.com
 <div class="festival-card">
 
 
-<!--
-写真ファイル
-
-GitHubで index.html と同じ場所に
-kawasaki-summer-festival-2026.jpg
-を置いてください。
--->
-
 <img
 class="festival-photo"
 src="kawasaki-summer-festival-2026.jpg"
-alt="かわさき夏祭り2026">
+alt="かわさき夏祭り2026 夜空">
 
 
 <h3 class="festival-name">
@@ -867,7 +912,9 @@ rel="noopener noreferrer">
 
 <div class="info-card">
 
-<h3>🎺 活動日</h3>
+<h3>
+🎺 活動日
+</h3>
 
 <p>
 月2回程度<br>
@@ -880,7 +927,9 @@ rel="noopener noreferrer">
 
 <div class="info-card">
 
-<h3>🎵 演奏する曲</h3>
+<h3>
+🎵 演奏する曲
+</h3>
 
 <p>
 Jポップやアニメソング等、
@@ -893,7 +942,9 @@ Jポップやアニメソング等、
 
 <div class="info-card">
 
-<h3>📍 活動場所</h3>
+<h3>
+📍 活動場所
+</h3>
 
 <p>
 (株)丸正精建敷地内プレハブ
@@ -904,11 +955,14 @@ Jポップやアニメソング等、
 
 <div class="info-card">
 
-<h3>😊 団員募集</h3>
+<h3>
+🎷 メンバー
+</h3>
 
 <p>
-老若男女、音楽が好きな方なら、
-どなたでも入団資格がございます。
+川崎中学校吹奏楽部OB・OG、
+現役生を中心に、
+音楽が好きな仲間が集まっています。
 </p>
 
 </div>
@@ -940,7 +994,8 @@ Jポップやアニメソング等、
 2026.08.15
 </span>
 
-かわさき夏祭り2026に出演予定です。
+かわさき夏祭り2026に
+出演予定です。
 
 </div>
 
@@ -980,20 +1035,15 @@ Jポップやアニメソング等、
 <div class="contact-box">
 
 <p>
-川崎にゆかりのある方はもちろんのこと、
-と言うより、このホームページを見た方は、
-その時点で「川崎にゆかりのある方」になりました。
-</p>
-
-<p>
-なので、老若男女音楽が好きな方、
-どなたでも大歓迎です。笑
+音楽が好きな方、
+川崎にゆかりのある方、
+一緒に楽しく演奏してみませんか？
 </p>
 
 <p>
 興味を持たれた方は、
-以下のかわさきwindsオーケストラ公式アドレスに
-お問い合わせください。
+かわさきwindsオーケストラ公式アドレスまで
+お気軽にお問い合わせください。
 </p>
 
 
