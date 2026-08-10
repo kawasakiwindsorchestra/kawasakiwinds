@@ -74,7 +74,9 @@ header {
   gap: 30px;
 }
 
+
 /* ヘッダーのロゴは本物の画像 */
+
 .header-logo {
   display: flex;
   align-items: center;
@@ -142,7 +144,9 @@ nav a:hover {
     );
 }
 
+
 /* 音符の飾り */
+
 .hero::before {
   content: "♪";
   position: absolute;
@@ -179,10 +183,8 @@ nav a:hover {
   width: min(430px, 78vw);
   margin: 0 auto 42px;
 
-  /* ロゴ画像そのものを見せる */
   object-fit: contain;
 
-  /* 白いロゴ画像なので背景は白 */
   background: #ffffff;
 
   border-radius: 50%;
@@ -360,11 +362,145 @@ section {
 
 
 /* =========================
-   出演情報・活動情報
+   出演情報・かわさき夏祭り
 ========================= */
 
 .info {
   background: #f1fafc;
+}
+
+.event-card {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 35px 30px 45px;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  box-shadow: 0 8px 28px rgba(25,100,120,0.08);
+
+  border: 1px solid #e1f0f4;
+
+  text-align: center;
+}
+
+.event-card h3 {
+  margin: 0 0 30px;
+
+  color: #087fae;
+
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.4;
+
+  font-weight: 800;
+}
+
+
+/* 夏祭り画像 */
+
+.event-image-link {
+  display: block;
+
+  width: 100%;
+  max-width: 720px;
+
+  margin: 0 auto 35px;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(25,100,120,0.12);
+
+  transition: transform 0.2s ease;
+}
+
+.event-image-link:hover .event-image {
+  transform: scale(1.01);
+}
+
+
+/* 出演日時 */
+
+.event-date {
+  margin: 0 0 25px;
+
+  font-size: clamp(24px, 5vw, 36px);
+
+  font-weight: 800;
+
+  color: #17384a;
+}
+
+.event-place {
+  margin: 0 0 28px;
+
+  font-size: clamp(21px, 4vw, 30px);
+
+  color: #17384a;
+}
+
+.event-time {
+  margin: 0;
+
+  color: #087fae;
+
+  font-size: clamp(28px, 5vw, 42px);
+
+  line-height: 1.5;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   一緒に演奏しませんか？
+========================= */
+
+.welcome-card {
+  max-width: 900px;
+
+  margin: 45px auto 0;
+
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  border: 1px solid #dceff4;
+
+  box-shadow: 0 8px 28px rgba(25,100,120,0.06);
+}
+
+.welcome-card p {
+  margin: 0 0 45px;
+
+  font-size: clamp(20px, 3.5vw, 28px);
+
+  line-height: 2;
+
+  color: #17384a;
+}
+
+.welcome-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   活動情報
+========================= */
+
+#activities {
+  background: #ffffff;
 }
 
 .cards {
@@ -524,6 +660,75 @@ footer p {
     padding: 28px 22px;
   }
 
+
+  /* 出演情報 */
+
+  .event-card {
+    padding: 30px 18px 38px;
+
+    border-radius: 25px;
+  }
+
+  .event-card h3 {
+    font-size: 32px;
+
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+  }
+
+  .event-image-link {
+    margin-bottom: 30px;
+  }
+
+  .event-image {
+    border-radius: 17px;
+  }
+
+  .event-date {
+    font-size: 25px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+  }
+
+  .event-place {
+    font-size: 23px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+  }
+
+  .event-time {
+    font-size: 30px;
+
+    line-height: 1.6;
+  }
+
+
+  /* 募集案内 */
+
+  .welcome-card {
+    margin-top: 35px;
+
+    padding: 38px 20px;
+
+    border-radius: 24px;
+  }
+
+  .welcome-card p {
+    font-size: 20px;
+
+    line-height: 2.1;
+
+    margin-bottom: 42px;
+  }
+
+
+  /* 活動情報 */
+
   .cards {
     grid-template-columns: 1fr;
   }
@@ -584,6 +789,7 @@ footer p {
   <div class="hero-content">
 
     <!-- ★ 本物のロゴをここに表示 ★ -->
+
     <img
       class="main-logo"
       src="./logo.jpg"
@@ -603,6 +809,7 @@ footer p {
     </p>
 
     <div class="hero-buttons">
+
       <a href="#about" class="button button-primary">
         私たちについて
       </a>
@@ -610,6 +817,7 @@ footer p {
       <a href="#events" class="button button-secondary">
         出演情報を見る
       </a>
+
     </div>
 
     <div class="scroll-down">
@@ -656,7 +864,8 @@ footer p {
 
 
 <!-- =========================
-     情報
+     出演情報
+     かわさき夏祭り2026
 ========================= -->
 
 <section id="events" class="info">
@@ -668,36 +877,79 @@ footer p {
     </h2>
 
     <p class="section-lead">
-      今後の演奏会・イベント情報
+      かわさき夏祭り2026
     </p>
 
-    <div class="cards">
 
-      <div class="card">
+    <div class="event-card">
 
-        <h3>
-          演奏会・イベント
-        </h3>
+      <h3>
+        かわさき夏祭り2026
+      </h3>
 
-        <p>
-          今後の出演予定や演奏会について、
-          随時お知らせします。
-        </p>
 
-      </div>
+      <!--
+        写真をタッチすると
+        かわさき夏祭り公式サイトへ移動します。
 
-      <div class="card">
+        ※写真ファイル名が違う場合は
+        kawasaki-summer2026.jpg
+        の部分だけ変更してください。
+      -->
 
-        <h3>
-          最新のお知らせ
-        </h3>
+      <a
+        href="https://kawasaki-festival.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="event-image-link"
+      >
 
-        <p>
-          活動に関する最新情報を
-          こちらでご案内します。
-        </p>
+        <img
+          src="./kawasaki-summer2026.jpg"
+          alt="かわさき夏祭り2026"
+          class="event-image"
+        >
 
-      </div>
+      </a>
+
+
+      <p class="event-date">
+        2026年8月15日（土）
+      </p>
+
+
+      <p class="event-place">
+        川崎B&amp;G
+      </p>
+
+
+      <p class="event-time">
+        16時10分出演予定！
+      </p>
+
+    </div>
+
+
+    <!-- =========================
+         一緒に演奏しませんか？
+    ========================= -->
+
+    <div class="welcome-card">
+
+      <p>
+        音楽が好きな方、<br>
+        川崎にゆかりのある方、ない方<br>
+        （大歓迎です！）、<br>
+        一緒に楽しく演奏してみませんか？
+      </p>
+
+
+      <p>
+        興味を持たれた方は、<br>
+        かわさき winds オーケストラ公式<br>
+        アドレスまで<br>
+        お気軽にお問い合わせください。
+      </p>
 
     </div>
 
@@ -736,6 +988,7 @@ footer p {
         </p>
 
       </div>
+
 
       <div class="card">
 
