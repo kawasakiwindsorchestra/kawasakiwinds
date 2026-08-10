@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
 <title>かわさきwindsオーケストラ</title>
 
-<meta name="description"
-      content="かわさきwindsオーケストラ。川崎から、心に響く音楽を。">
+<meta
+  name="description"
+  content="かわさきwindsオーケストラ。川崎から、心に響く音楽を。"
+>
 
 <style>
 
@@ -41,7 +43,7 @@ body {
     sans-serif;
 
   color: #222;
-  background: #ffffff;
+  background: #eefbfe;
 
   line-height: 1.8;
 }
@@ -51,71 +53,61 @@ img {
   height: auto;
 }
 
+a {
+  color: inherit;
+}
+
 
 /* ==================================================
    ヘッダー
 ================================================== */
 
 header {
-  width: 100%;
-
   background: #ffffff;
 
-  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  position: relative;
-
-  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 
-/* ロゴ＋団体名 */
+/* ==================================================
+   ロゴエリア
+================================================== */
 
 .logo-area {
-  width: min(100% - 32px, 900px);
-
-  margin: 0 auto;
-
-  padding: 24px 0 18px;
-
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 22px;
+
+  padding: 20px 20px 14px;
+
+  background: #ffffff;
 }
 
-
-/* ロゴ */
-
 .logo-area img {
-  width: 105px;
-  height: 105px;
+  width: 125px;
+  height: 125px;
 
   object-fit: contain;
 
   display: block;
-
-  flex-shrink: 0;
 }
 
-
-/* 団体名 */
-
 .site-name {
-  color: #087fae;
+  color: #087eae;
 
-  font-size: clamp(24px, 5.5vw, 42px);
-
+  font-size: 35px;
   font-weight: 800;
 
   line-height: 1.35;
 
-  letter-spacing: 0.02em;
-
-  text-align: left;
+  letter-spacing: 0.03em;
 }
 
 
@@ -124,197 +116,155 @@ header {
 ================================================== */
 
 nav {
-  width: 100%;
-
   background: #ffffff;
+
+  padding: 4px 12px 22px;
 }
 
 nav ul {
-  width: min(100% - 24px, 1100px);
-
-  margin: 0 auto;
-
-  padding: 8px 0 22px;
-
-  list-style: none;
-
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
-  gap: clamp(14px, 3vw, 48px);
+  gap: 34px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 nav li {
-  margin: 0;
-  padding: 0;
+  white-space: nowrap;
 }
 
 nav a {
   display: block;
 
+  padding: 8px 4px;
+
   color: #222;
+
+  font-size: 20px;
+  font-weight: 700;
 
   text-decoration: none;
 
-  font-size: clamp(15px, 3.8vw, 25px);
-
-  font-weight: 700;
-
-  white-space: nowrap;
-
-  padding: 5px 2px;
-
-  transition: color 0.2s ease;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  color: #087fae;
+  color: #087eae;
 }
 
 
 /* ==================================================
-   共通セクション
-================================================== */
-
-section {
-  width: 100%;
-
-  padding: 78px 20px;
-}
-
-.section-inner {
-  width: min(100%, 900px);
-
-  margin: 0 auto;
-}
-
-
-/* ==================================================
-   トップ画面
+   メイン・ホーム
 ================================================== */
 
 #home {
   min-height: 720px;
 
-  padding-top: 70px;
+  padding: 70px 20px 90px;
 
-  padding-bottom: 90px;
+  text-align: center;
 
   background:
     radial-gradient(
-      circle at 50% 20%,
-      rgba(255,255,255,0.98) 0%,
-      rgba(236,250,253,0.95) 45%,
-      rgba(221,247,251,0.95) 100%
+      circle at 20% 25%,
+      rgba(255,255,255,0.95),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      rgba(255,255,255,0.9),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #f4fdff 0%,
+      #e5f9fd 100%
     );
-
-  position: relative;
-
-  overflow: hidden;
 }
 
 
-/* 音符 */
-
-#home::before,
-#home::after {
-  position: absolute;
-
-  color: rgba(73,180,211,0.10);
-
-  font-size: 110px;
-
-  pointer-events: none;
-
-  z-index: 0;
-}
-
-#home::before {
-  content: "♪";
-
-  left: 3%;
-
-  top: 180px;
-
-  transform: rotate(-12deg);
-}
-
-#home::after {
-  content: "♫";
-
-  right: 3%;
-
-  bottom: 120px;
-
-  transform: rotate(10deg);
-}
-
-
-/* トップ中身 */
-
-.hero {
-  position: relative;
-
-  z-index: 1;
-
-  width: min(100%, 760px);
-
-  margin: 0 auto;
-
-  text-align: center;
-}
-
-
-/* トップのロゴ */
+/* ==================================================
+   トップのロゴ
+================================================== */
 
 .hero-logo {
-  width: min(88vw, 650px);
+  width: min(620px, 90vw);
 
-  margin: 0 auto 42px;
+  margin: 0 auto 40px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 100, 150, 0.08);
+}
+
+.hero-logo img {
+  width: 100%;
 
   display: block;
 
-  border-radius: 20px;
-
-  box-shadow:
-    0 12px 35px rgba(0,100,130,0.10);
-
-  background: #ffffff;
+  border-radius: 18px;
 }
 
 
-/* キャッチコピー */
+/* ==================================================
+   メインタイトル
+================================================== */
 
-.catchcopy {
+.hero-title {
   margin: 0;
 
-  color: #087fae;
+  color: #087eae;
 
-  font-size: clamp(30px, 7vw, 58px);
+  font-size: clamp(48px, 11vw, 90px);
 
   font-weight: 800;
 
-  line-height: 1.35;
+  line-height: 1.18;
+
+  letter-spacing: 0.03em;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-copy {
+  margin: 38px auto 0;
+
+  color: #222;
+
+  font-size: clamp(21px, 5vw, 34px);
+
+  line-height: 1.9;
 
   letter-spacing: 0.04em;
 }
 
 
-/* サブコピー */
+/* ==================================================
+   各セクション
+================================================== */
 
-.subcopy {
-  margin: 24px 0 0;
+section:not(#home) {
+  padding: 75px 20px;
+}
 
-  color: #222;
+.section-inner {
+  width: 100%;
+  max-width: 850px;
 
-  font-size: clamp(18px, 4.5vw, 30px);
-
-  line-height: 1.8;
-
-  font-weight: 500;
+  margin: 0 auto;
 }
 
 
@@ -325,29 +275,32 @@ section {
 .section-title {
   text-align: center;
 
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 .section-title h2 {
   margin: 0;
 
-  color: #087fae;
+  color: #087eae;
 
-  font-size: clamp(28px, 6vw, 42px);
+  font-size: clamp(30px, 7vw, 46px);
 
   font-weight: 800;
 
-  line-height: 1.4;
+  line-height: 1.35;
+
+  letter-spacing: 0.05em;
 }
 
-.line {
-  width: 70px;
+.section-title .line {
+  width: 180px;
+  max-width: 55%;
 
-  height: 4px;
+  height: 5px;
 
-  margin: 15px auto 0;
+  margin: 16px auto 0;
 
-  background: #087fae;
+  background: #087eae;
 
   border-radius: 10px;
 }
@@ -362,17 +315,23 @@ section {
 }
 
 .about-text {
-  max-width: 720px;
+  max-width: 760px;
 
   margin: 0 auto;
 
+  padding: 38px 30px;
+
+  background: #f5fcfe;
+
+  border-radius: 24px;
+
   text-align: center;
 
-  font-size: clamp(17px, 4.3vw, 24px);
+  font-size: clamp(18px, 4.5vw, 25px);
 
-  line-height: 2.05;
+  line-height: 2;
 
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 
@@ -381,36 +340,36 @@ section {
 ================================================== */
 
 #performance {
-  background: #f5fcfe;
+  background: #eefbfe;
 }
 
 .performance-box {
-  max-width: 720px;
+  max-width: 760px;
 
   margin: 0 auto;
 
-  padding: 34px 24px 40px;
+  padding: 38px 25px;
 
   background: #ffffff;
 
-  border-radius: 22px;
-
-  box-shadow:
-    0 8px 30px rgba(0,100,130,0.08);
+  border-radius: 28px;
 
   text-align: center;
+
+  box-shadow:
+    0 8px 30px rgba(0, 120, 170, 0.07);
 }
 
 .performance-box h3 {
-  margin: 0 0 12px;
+  margin: 0 0 18px;
 
-  line-height: 1.5;
+  color: #087eae;
+
+  line-height: 1.4;
 }
 
 .festival-title {
   display: block;
-
-  color: #087fae;
 
   font-size: clamp(25px, 6vw, 38px);
 
@@ -420,31 +379,27 @@ section {
 .festival-year {
   display: block;
 
-  color: #d39b22;
+  margin-top: 4px;
 
-  font-size: clamp(22px, 5vw, 32px);
+  font-size: clamp(20px, 5vw, 30px);
 
   font-weight: 700;
-
-  margin-top: 2px;
 }
 
 .performance-date,
 .performance-place,
 .performance-time {
-  margin: 8px 0;
+  margin: 10px 0;
 
-  font-size: clamp(17px, 4vw, 23px);
+  font-size: clamp(18px, 4.5vw, 24px);
 
   line-height: 1.7;
 }
 
 .performance-time {
-  color: #087fae;
+  color: #087eae;
 
   font-weight: 800;
-
-  margin-top: 14px;
 }
 
 
@@ -453,7 +408,9 @@ section {
 ================================================== */
 
 .photo-box {
-  margin-top: 30px;
+  margin: 30px auto 0;
+
+  max-width: 650px;
 }
 
 .photo-box a {
@@ -461,28 +418,14 @@ section {
 }
 
 .photo-box img {
-  display: block;
-
   width: 100%;
 
-  max-width: 620px;
+  display: block;
 
-  height: auto;
-
-  margin: 0 auto;
-
-  border-radius: 16px;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.photo-box a:hover img {
-  transform: translateY(-3px);
+  border-radius: 20px;
 
   box-shadow:
-    0 10px 25px rgba(0,100,130,0.15);
+    0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -495,25 +438,35 @@ section {
 }
 
 .activity-box {
-  max-width: 720px;
+  max-width: 760px;
 
   margin: 0 auto;
+
+  padding: 35px 28px;
+
+  background: #f5fcfe;
+
+  border-radius: 28px;
 }
 
 .activity-item {
-  padding: 23px 20px;
+  padding: 22px 0;
 
-  border-bottom: 1px solid #dceff3;
+  border-bottom: 1px solid #cdebf2;
 
-  font-size: 18px;
+  font-size: clamp(17px, 4.3vw, 23px);
 
   line-height: 1.9;
-
-  letter-spacing: 0.02em;
 }
 
 .activity-item:first-child {
-  border-top: 1px solid #dceff3;
+  padding-top: 0;
+}
+
+.activity-item:last-child {
+  padding-bottom: 0;
+
+  border-bottom: none;
 }
 
 .activity-item strong {
@@ -521,11 +474,9 @@ section {
 
   margin-bottom: 6px;
 
-  color: #087fae;
+  color: #087eae;
 
-  font-size: 21px;
-
-  line-height: 1.5;
+  font-size: 1.1em;
 }
 
 
@@ -534,60 +485,95 @@ section {
 ================================================== */
 
 #contact {
-  background: #f5fcfe;
-
-  padding-bottom: 110px;
+  background:
+    linear-gradient(
+      180deg,
+      #eefbfe 0%,
+      #e6f9fd 100%
+    );
 }
 
+
+/* お問い合わせボックス */
+
 .contact-box {
+  width: calc(100% - 40px);
+
   max-width: 720px;
 
-  margin: 0 auto;
+  margin: 30px auto 70px;
 
-  padding: 35px 24px;
+  padding: 42px 28px 48px;
 
   background: #ffffff;
 
-  border-radius: 22px;
+  border-radius: 28px;
+
+  text-align: center;
 
   box-shadow:
-    0 8px 30px rgba(0,100,130,0.08);
+    0 8px 30px rgba(0, 120, 170, 0.08);
+}
+
+
+/* 本文 */
+
+.contact-text {
+  margin: 0 auto;
+
+  color: #222;
+
+  font-size: clamp(18px, 4.5vw, 24px);
+
+  font-weight: 400;
+
+  line-height: 2;
+
+  letter-spacing: 0.03em;
 
   text-align: center;
 }
 
-.contact-text {
-  margin: 0 0 28px;
 
-  font-size: 18px;
+/* 2つ目の文章 */
 
-  line-height: 2;
-
-  letter-spacing: 0.02em;
+.contact-guide {
+  margin-top: 38px;
 }
 
-.email {
+
+/* メールアドレス */
+
+.contact-box .email {
   display: inline-block;
 
-  max-width: 100%;
+  margin-top: 32px;
 
-  color: #087fae;
+  padding: 14px 20px;
 
-  font-size: 17px;
+  color: #087eae;
 
-  line-height: 1.6;
+  background: #f0fbff;
+
+  border: 2px solid #087eae;
+
+  border-radius: 14px;
+
+  font-size: clamp(16px, 4vw, 21px);
 
   font-weight: 700;
 
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+
   text-decoration: none;
 
-  overflow-wrap: anywhere;
-
-  word-break: break-word;
+  word-break: break-all;
 }
 
-.email:hover {
-  text-decoration: underline;
+.contact-box .email:active {
+  opacity: 0.7;
 }
 
 
@@ -596,13 +582,17 @@ section {
 ================================================== */
 
 footer {
-  padding: 30px 20px;
+  padding: 35px 20px;
 
-  background: #087fae;
+  background: #087eae;
 
   color: #ffffff;
 
   text-align: center;
+}
+
+footer p {
+  margin: 0;
 
   font-size: 14px;
 
@@ -611,42 +601,43 @@ footer {
 
 
 /* ==================================================
-   ページ上部へ戻る
+   ページトップボタン
 ================================================== */
 
 #to-top {
   position: fixed;
 
-  right: 20px;
-
-  bottom: 24px;
+  right: 22px;
+  bottom: 22px;
 
   width: 64px;
-
   height: 64px;
 
   display: flex;
 
-  align-items: center;
-
   justify-content: center;
-
-  background: #087fae;
-
-  color: #ffffff;
+  align-items: center;
 
   border-radius: 50%;
 
-  text-decoration: none;
+  background: #087eae;
 
-  font-size: 34px;
+  color: #ffffff;
+
+  font-size: 38px;
 
   line-height: 1;
 
-  box-shadow:
-    0 8px 22px rgba(0,80,110,0.25);
+  text-decoration: none;
 
-  z-index: 100;
+  box-shadow:
+    0 6px 20px rgba(0, 80, 120, 0.25);
+
+  z-index: 999;
+}
+
+#to-top:hover {
+  opacity: 0.85;
 }
 
 
@@ -654,101 +645,175 @@ footer {
    スマートフォン
 ================================================== */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-  /* ヘッダー */
+
+  /* ------------------------------
+     ロゴ
+  ------------------------------ */
 
   .logo-area {
-    padding: 20px 12px 14px;
+    gap: 12px;
 
-    gap: 14px;
+    padding: 12px 10px 10px;
   }
 
   .logo-area img {
     width: 82px;
-
     height: 82px;
   }
 
   .site-name {
-    font-size: 25px;
+    font-size: 24px;
 
     line-height: 1.35;
   }
 
 
-  /* ナビ */
+  /* ------------------------------
+     ナビ
+  ------------------------------ */
+
+  nav {
+    padding: 2px 8px 14px;
+
+    overflow-x: auto;
+  }
 
   nav ul {
-    flex-wrap: wrap;
+    justify-content: flex-start;
 
-    gap: 4px 18px;
+    gap: 22px;
 
-    padding: 8px 8px 18px;
+    min-width: max-content;
   }
 
   nav a {
     font-size: 16px;
 
-    padding: 4px 0;
+    padding: 5px 2px;
   }
 
 
-  /* トップ */
+  /* ------------------------------
+     ホーム
+  ------------------------------ */
 
   #home {
     min-height: auto;
 
-    padding-top: 45px;
-
-    padding-bottom: 75px;
+    padding: 38px 14px 65px;
   }
 
   .hero-logo {
-    width: min(88vw, 520px);
+    width: min(92vw, 600px);
 
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 
-    border-radius: 16px;
+    padding: 10px;
+
+    border-radius: 22px;
   }
 
-  .catchcopy {
-    font-size: 34px;
-
-    line-height: 1.45;
+  .hero-logo img {
+    border-radius: 14px;
   }
 
-  .subcopy {
-    font-size: 18px;
+  .hero-title {
+    font-size: clamp(42px, 12vw, 65px);
+
+    line-height: 1.2;
+  }
+
+  .hero-copy {
+    margin-top: 25px;
+
+    font-size: 20px;
 
     line-height: 1.9;
-
-    margin-top: 20px;
   }
 
 
-  /* 共通 */
+  /* ------------------------------
+     セクション
+  ------------------------------ */
 
-  section {
-    padding: 65px 18px;
+  section:not(#home) {
+    padding: 55px 14px;
   }
 
   .section-title {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+
+    line-height: 1.35;
+  }
+
+  .section-title .line {
+    width: 140px;
+
+    height: 4px;
+
+    margin-top: 12px;
   }
 
 
-  /* 出演情報 */
+  /* ------------------------------
+     私たちについて
+  ------------------------------ */
 
-  .performance-box,
-  .contact-box {
-    padding-left: 18px;
+  .about-text {
+    padding: 28px 20px;
 
-    padding-right: 18px;
+    font-size: 18px;
+
+    line-height: 2;
   }
 
 
-  /* 活動情報 */
+  /* ------------------------------
+     出演情報
+  ------------------------------ */
+
+  .performance-box {
+    padding: 28px 18px;
+
+    border-radius: 24px;
+  }
+
+  .festival-title {
+    font-size: 27px;
+  }
+
+  .festival-year {
+    font-size: 22px;
+  }
+
+  .performance-date,
+  .performance-place,
+  .performance-time {
+    font-size: 18px;
+
+    line-height: 1.8;
+  }
+
+  .photo-box {
+    margin-top: 25px;
+  }
+
+
+  /* ------------------------------
+     活動情報
+  ------------------------------ */
+
+  .activity-box {
+    padding: 25px 20px;
+
+    border-radius: 24px;
+  }
 
   .activity-item {
     font-size: 17px;
@@ -756,44 +821,62 @@ footer {
     line-height: 1.9;
   }
 
-  .activity-item strong {
-    font-size: 20px;
 
-    line-height: 1.5;
+  /* ==================================================
+     お問い合わせ
+     ★今回の改善部分
+  ================================================== */
 
-    margin-bottom: 5px;
+  .contact-box {
+    width: calc(100% - 28px);
+
+    margin-top: 20px;
+
+    padding: 32px 20px 38px;
+
+    border-radius: 24px;
   }
 
 
-  /* お問い合わせ */
-
   .contact-text {
-    font-size: 17px;
+    font-size: 19px;
 
-    line-height: 2;
+    line-height: 2.05;
 
     letter-spacing: 0.02em;
   }
 
-  .email {
-    font-size: 16px;
 
-    line-height: 1.6;
+  .contact-guide {
+    margin-top: 32px;
   }
 
 
-  /* トップへ */
+  .contact-box .email {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 28px;
+
+    padding: 13px 12px;
+
+    font-size: 16px;
+  }
+
+
+  /* ------------------------------
+     ページトップ
+  ------------------------------ */
 
   #to-top {
-    width: 58px;
-
-    height: 58px;
-
-    right: 16px;
-
+    right: 18px;
     bottom: 18px;
 
-    font-size: 30px;
+    width: 58px;
+    height: 58px;
+
+    font-size: 34px;
   }
 
 }
@@ -803,16 +886,11 @@ footer {
    小さいスマートフォン
 ================================================== */
 
-@media (max-width: 390px) {
-
-  .logo-area {
-    gap: 10px;
-  }
+@media (max-width: 380px) {
 
   .logo-area img {
-    width: 70px;
-
-    height: 70px;
+    width: 72px;
+    height: 72px;
   }
 
   .site-name {
@@ -820,25 +898,31 @@ footer {
   }
 
   nav ul {
-    gap: 3px 13px;
+    gap: 17px;
   }
 
   nav a {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .catchcopy {
-    font-size: 30px;
+  .contact-box {
+    width: calc(100% - 20px);
+
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .subcopy {
-    font-size: 17px;
+  .contact-text {
+    font-size: 18px;
+  }
+
+  .contact-box .email {
+    font-size: 15px;
   }
 
 }
 
 </style>
-
 </head>
 
 
@@ -853,17 +937,15 @@ footer {
 
   <div class="logo-area">
 
-    <!-- ロゴ：そのまま -->
+    <!-- ロゴ -->
     <img
       src="logo.jpg"
       alt="かわさきwindsオーケストラ"
     >
 
     <div class="site-name">
-
       かわさきwinds<br>
       オーケストラ
-
     </div>
 
   </div>
@@ -910,41 +992,43 @@ footer {
 </header>
 
 
-
 <!-- ==================================================
-     トップ
+     ホーム
 ================================================== -->
+
+<main>
 
 <section id="home">
 
-  <div class="hero">
+  <div class="hero-logo">
 
-    <!-- ロゴ：そのまま -->
     <img
-      class="hero-logo"
       src="logo.jpg"
       alt="かわさきwindsオーケストラ ロゴ"
-      loading="eager"
     >
-
-
-    <p class="catchcopy">
-
-      音楽でつながる。
-
-    </p>
-
-
-    <p class="subcopy">
-
-      川崎から、心に響く音楽を。
-
-    </p>
 
   </div>
 
-</section>
 
+  <h1 class="hero-title">
+
+    <span>かわさき</span>
+
+    <span>winds</span>
+
+    <span>オーケストラ</span>
+
+  </h1>
+
+
+  <p class="hero-copy">
+
+    音楽でつながる。<br>
+    川崎から、心に響く音楽を。
+
+  </p>
+
+</section>
 
 
 <!-- ==================================================
@@ -977,7 +1061,6 @@ footer {
   </div>
 
 </section>
-
 
 
 <!-- ==================================================
@@ -1036,10 +1119,10 @@ footer {
       </p>
 
 
-      <!-- ==================================================
+      <!-- =====================
            夏祭り写真
-           タップすると公式サイトへ
-      ================================================== -->
+           タップで公式サイトへ
+      ====================== -->
 
       <div class="photo-box">
 
@@ -1066,7 +1149,6 @@ footer {
   </div>
 
 </section>
-
 
 
 <!-- ==================================================
@@ -1132,7 +1214,6 @@ footer {
 </section>
 
 
-
 <!-- ==================================================
      お問い合わせ
 ================================================== -->
@@ -1140,6 +1221,7 @@ footer {
 <section id="contact">
 
   <div class="section-inner">
+
 
     <div class="section-title">
 
@@ -1158,15 +1240,17 @@ footer {
       <p class="contact-text">
 
         音楽が好きな方、<br>
+        川崎にゆかりのある方、ない方<br>
+        （大歓迎です！）、<br>
+        一緒に楽しく演奏してみませんか？
 
-        川崎にゆかりのある方、ない方(大歓迎です！)、<br>
+      </p>
 
-        一緒に楽しく演奏してみませんか？<br><br>
+
+      <p class="contact-text contact-guide">
 
         興味を持たれた方は、<br>
-
         かわさきwindsオーケストラ公式アドレスまで<br>
-
         お気軽にお問い合わせください。
 
       </p>
@@ -1188,6 +1272,7 @@ footer {
 
 </section>
 
+</main>
 
 
 <!-- ==================================================
@@ -1196,14 +1281,15 @@ footer {
 
 <footer>
 
-  かわさきwindsオーケストラ
+  <p>
+    © 2026 かわさきwindsオーケストラ
+  </p>
 
 </footer>
 
 
-
 <!-- ==================================================
-     ページ上部へ
+     ページトップ
 ================================================== -->
 
 <a
@@ -1216,5 +1302,4 @@ footer {
 
 
 </body>
-
 </html>
