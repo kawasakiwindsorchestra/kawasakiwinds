@@ -47,7 +47,7 @@ header{
 .header-inner{
   max-width:1200px;
   margin:0 auto;
-  padding:12px 20px;
+  padding:14px 20px;
   display:flex;
   align-items:center;
   gap:25px;
@@ -56,13 +56,13 @@ header{
 .logo-area{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:15px;
   flex-shrink:0;
 }
 
 .logo-area img{
-  width:85px;
-  height:85px;
+  width:90px;
+  height:90px;
   object-fit:contain;
   display:block;
 }
@@ -70,8 +70,9 @@ header{
 .site-name{
   color:#0878aa;
   font-weight:700;
-  font-size:21px;
-  line-height:1.2;
+  font-size:22px;
+  line-height:1.25;
+  letter-spacing:.02em;
 }
 
 nav{
@@ -108,7 +109,7 @@ section{
 }
 
 .section-inner{
-  max-width:950px;
+  max-width:1000px;
   margin:0 auto;
 }
 
@@ -120,17 +121,17 @@ section{
 .section-title h2{
   margin:0;
   color:#0878aa;
-  font-size:38px;
+  font-size:40px;
   font-weight:700;
   line-height:1.3;
 }
 
 .line{
-  width:130px;
+  width:145px;
   height:7px;
   background:#0878aa;
   border-radius:10px;
-  margin:20px auto 0;
+  margin:22px auto 0;
 }
 
 /* =========================
@@ -138,8 +139,8 @@ section{
 ========================= */
 
 #home{
-  min-height:620px;
-  padding:75px 20px 85px;
+  min-height:650px;
+  padding:85px 20px 95px;
   background:
     radial-gradient(
       circle at 20% 30%,
@@ -151,29 +152,29 @@ section{
 }
 
 .home-logo{
-  width:200px;
-  max-width:65%;
-  margin:0 auto 25px;
+  width:220px;
+  max-width:70%;
+  margin:0 auto 30px;
 }
 
 .home-logo img{
   width:100%;
   height:auto;
-  display:block;
   object-fit:contain;
+  display:block;
 }
 
 .home-title{
   color:#0878aa;
-  font-size:52px;
+  font-size:58px;
   font-weight:800;
-  line-height:1.3;
-  margin:0 auto 25px;
+  line-height:1.35;
+  margin:0 auto 28px;
 }
 
 .home-subtitle{
-  font-size:19px;
-  line-height:1.8;
+  font-size:20px;
+  line-height:1.9;
   margin:0;
 }
 
@@ -186,7 +187,7 @@ section{
 }
 
 .about-text{
-  max-width:800px;
+  max-width:850px;
   margin:0 auto;
   text-align:center;
   font-size:18px;
@@ -205,7 +206,7 @@ section{
   margin:0 auto;
   background:#fff;
   border-radius:22px;
-  padding:30px 25px 35px;
+  padding:32px 28px 30px;
   box-shadow:0 8px 25px rgba(0,0,0,.07);
   text-align:center;
 }
@@ -213,7 +214,7 @@ section{
 .performance-box h3{
   margin:0 0 18px;
   color:#0878aa;
-  font-size:27px;
+  font-size:28px;
   line-height:1.4;
 }
 
@@ -240,7 +241,6 @@ section{
 ========================= */
 
 .performance-photo{
-  width:100%;
   max-width:760px;
   margin:0 auto;
 }
@@ -258,17 +258,16 @@ section{
   object-fit:contain;
   border-radius:16px;
   cursor:pointer;
-  transition:opacity .2s ease, transform .2s ease;
+  transition:opacity .2s ease;
 }
 
 .performance-photo img:hover{
   opacity:.9;
-  transform:scale(1.01);
 }
 
 .photo-note{
   margin:10px 0 0;
-  font-size:14px;
+  font-size:13px;
   color:#666;
 }
 
@@ -281,7 +280,7 @@ section{
 }
 
 .activity-box{
-  max-width:800px;
+  max-width:850px;
   margin:0 auto;
 }
 
@@ -307,11 +306,11 @@ section{
 }
 
 .contact-box{
-  max-width:800px;
+  max-width:850px;
   margin:0 auto;
   background:#fff;
   border-radius:22px;
-  padding:32px 25px;
+  padding:32px 28px;
   box-shadow:0 8px 25px rgba(0,0,0,.06);
   text-align:center;
 }
@@ -343,7 +342,7 @@ footer{
   background:#0878aa;
   color:#fff;
   text-align:center;
-  padding:28px 20px;
+  padding:30px 20px;
 }
 
 footer p{
@@ -359,8 +358,8 @@ footer p{
   position:fixed;
   right:20px;
   bottom:20px;
-  width:58px;
-  height:58px;
+  width:60px;
+  height:60px;
   border-radius:50%;
   background:#0878aa;
   color:#fff;
@@ -368,7 +367,7 @@ footer p{
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  font-size:32px;
+  font-size:34px;
   line-height:1;
   box-shadow:0 5px 15px rgba(0,0,0,.2);
   z-index:999;
@@ -381,7 +380,7 @@ footer p{
 @media(max-width:800px){
 
   .header-inner{
-    padding:8px 12px;
+    padding:9px 12px;
     gap:10px;
     overflow-x:auto;
   }
@@ -391,23 +390,16 @@ footer p{
   }
 
   .logo-area img{
-    width:65px;
-    height:65px;
+    width:68px;
+    height:68px;
   }
 
   .site-name{
-    font-size:16px;
-  }
-
-  nav{
-    margin-left:auto;
-    max-width:55%;
-    overflow-x:auto;
+    font-size:17px;
   }
 
   nav ul{
     gap:12px;
-    flex-wrap:nowrap;
   }
 
   nav a{
@@ -427,19 +419,19 @@ footer p{
   }
 
   .line{
-    width:115px;
+    width:120px;
     height:6px;
-    margin-top:16px;
+    margin-top:17px;
   }
 
   #home{
-    min-height:580px;
-    padding:55px 15px 65px;
+    min-height:auto;
+    padding:60px 15px 70px;
   }
 
   .home-logo{
-    width:165px;
-    margin-bottom:20px;
+    width:180px;
+    margin-bottom:22px;
   }
 
   .home-title{
@@ -457,7 +449,7 @@ footer p{
   }
 
   .performance-box{
-    padding:25px 15px 30px;
+    padding:25px 15px 28px;
   }
 
   .performance-box h3{
@@ -481,7 +473,7 @@ footer p{
   }
 
   .photo-note{
-    font-size:13px;
+    font-size:12px;
   }
 
   .activity-item{
@@ -521,12 +513,16 @@ footer p{
 @media(max-width:480px){
 
   .logo-area img{
-    width:58px;
-    height:58px;
+    width:60px;
+    height:60px;
   }
 
   .site-name{
     font-size:15px;
+  }
+
+  nav ul{
+    gap:10px;
   }
 
   nav a{
@@ -622,15 +618,19 @@ footer p{
 
 
   <h1 class="home-title">
+
     かわさき<br>
     winds<br>
     オーケストラ
+
   </h1>
 
 
   <p class="home-subtitle">
+
     音楽でつながる。<br>
     川崎から、心に響く音楽を。
+
   </p>
 
 </section>
@@ -704,15 +704,15 @@ footer p{
       </p>
 
 
-      <!--
-        夏祭り写真
-        写真をタップすると公式サイトへ移動
-      -->
+      <!-- 夏祭り写真 -->
+      <!-- 写真をタップすると公式サイトへ移動 -->
 
       <div class="performance-photo">
 
         <a
           href="https://kawasaki-festival.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="かわさき夏祭り2026公式サイトを見る"
         >
 
