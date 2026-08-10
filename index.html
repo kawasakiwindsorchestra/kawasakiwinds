@@ -369,15 +369,15 @@ section {
   background: #f1fafc;
 }
 
-.event-card {
+.event-box {
   max-width: 900px;
   margin: 0 auto;
 
-  padding: 35px 30px 45px;
+  padding: 35px 30px;
 
   background: #ffffff;
 
-  border-radius: 28px;
+  border-radius: 20px;
 
   box-shadow: 0 8px 28px rgba(25,100,120,0.08);
 
@@ -386,112 +386,53 @@ section {
   text-align: center;
 }
 
-.event-card h3 {
+.event-box h3 {
   margin: 0 0 30px;
 
   color: #087fae;
 
-  font-size: clamp(30px, 6vw, 48px);
-  line-height: 1.4;
-
-  font-weight: 800;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.5;
 }
 
-
-/* 夏祭り画像 */
-
-.event-image-link {
-  display: block;
-
-  width: 100%;
-  max-width: 720px;
-
-  margin: 0 auto 35px;
+.event-box p {
+  margin: 0;
 }
-
-.event-image {
-  width: 100%;
-  height: auto;
-
-  border-radius: 20px;
-
-  box-shadow: 0 8px 25px rgba(25,100,120,0.12);
-
-  transition: transform 0.2s ease;
-}
-
-.event-image-link:hover .event-image {
-  transform: scale(1.01);
-}
-
-
-/* 出演日時 */
 
 .event-date {
-  margin: 0 0 25px;
-
-  font-size: clamp(24px, 5vw, 36px);
-
-  font-weight: 800;
-
-  color: #17384a;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 700;
+  line-height: 1.8;
 }
 
 .event-place {
-  margin: 0 0 28px;
+  margin-top: 12px !important;
 
-  font-size: clamp(21px, 4vw, 30px);
-
-  color: #17384a;
+  font-size: clamp(19px, 3.5vw, 26px);
+  line-height: 1.8;
 }
 
 .event-time {
-  margin: 0;
+  margin-top: 18px !important;
 
   color: #087fae;
 
-  font-size: clamp(28px, 5vw, 42px);
-
-  line-height: 1.5;
-
+  font-size: clamp(24px, 4.5vw, 34px);
   font-weight: 800;
+
+  line-height: 1.7;
 }
 
+.event-description {
+  margin-top: 35px !important;
 
-/* =========================
-   一緒に演奏しませんか？
-========================= */
+  padding-top: 30px;
 
-.welcome-card {
-  max-width: 900px;
+  border-top: 1px solid #e1f0f4;
 
-  margin: 45px auto 0;
-
-  padding: 45px 35px;
-
-  text-align: center;
-
-  background: #ffffff;
-
-  border-radius: 28px;
-
-  border: 1px solid #dceff4;
-
-  box-shadow: 0 8px 28px rgba(25,100,120,0.06);
-}
-
-.welcome-card p {
-  margin: 0 0 45px;
-
-  font-size: clamp(20px, 3.5vw, 28px);
+  font-size: clamp(17px, 3vw, 21px);
 
   line-height: 2;
-
-  color: #17384a;
-}
-
-.welcome-card p:last-child {
-  margin-bottom: 0;
 }
 
 
@@ -660,74 +601,37 @@ footer p {
     padding: 28px 22px;
   }
 
-
-  /* 出演情報 */
-
-  .event-card {
-    padding: 30px 18px 38px;
-
-    border-radius: 25px;
+  .event-box {
+    padding: 28px 20px;
   }
 
-  .event-card h3 {
-    font-size: 32px;
-
+  .event-box h3 {
+    font-size: 30px;
     line-height: 1.5;
-
-    margin-bottom: 28px;
-  }
-
-  .event-image-link {
-    margin-bottom: 30px;
-  }
-
-  .event-image {
-    border-radius: 17px;
-  }
-
-  .event-date {
-    font-size: 25px;
-
-    line-height: 1.7;
-
-    margin-bottom: 20px;
-  }
-
-  .event-place {
-    font-size: 23px;
-
-    line-height: 1.7;
-
     margin-bottom: 25px;
   }
 
-  .event-time {
-    font-size: 30px;
-
-    line-height: 1.6;
+  .event-date {
+    font-size: 22px;
+    line-height: 1.8;
   }
 
-
-  /* 募集案内 */
-
-  .welcome-card {
-    margin-top: 35px;
-
-    padding: 38px 20px;
-
-    border-radius: 24px;
-  }
-
-  .welcome-card p {
+  .event-place {
     font-size: 20px;
-
-    line-height: 2.1;
-
-    margin-bottom: 42px;
+    line-height: 1.8;
   }
 
+  .event-time {
+    font-size: 28px;
+    line-height: 1.7;
+  }
 
-  /* 活動情報 */
+  .event-description {
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 28px !important;
+    padding-top: 25px;
+  }
 
   .cards {
     grid-template-columns: 1fr;
@@ -761,7 +665,6 @@ footer p {
   <div class="header-inner">
 
     <a href="#home" class="header-logo">
-      <!-- ここが実際のロゴ画像 -->
       <img src="./logo.jpg"
            alt="かわさき winds オーケストラ ロゴ">
     </a>
@@ -787,8 +690,6 @@ footer p {
 <section id="home" class="hero">
 
   <div class="hero-content">
-
-    <!-- ★ 本物のロゴをここに表示 ★ -->
 
     <img
       class="main-logo"
@@ -849,11 +750,9 @@ footer p {
     <div class="about-box">
 
       <p>
-        かわさき winds オーケストラは、
-        川崎を中心に活動する吹奏楽団です。
-        <br><br>
-        世代や経験を越えて音楽を楽しみながら、
-        地域のみなさまに音楽の魅力を届けることを目指しています。
+        川崎中学校吹奏楽部OB・OG、<br>
+        現役生で構成された、<br>
+        できたてほやほやの吹奏楽団です。
       </p>
 
     </div>
@@ -865,7 +764,6 @@ footer p {
 
 <!-- =========================
      出演情報
-     かわさき夏祭り2026
 ========================= -->
 
 <section id="events" class="info">
@@ -880,75 +778,28 @@ footer p {
       かわさき夏祭り2026
     </p>
 
-
-    <div class="event-card">
+    <div class="event-box">
 
       <h3>
         かわさき夏祭り2026
       </h3>
 
-
-      <!--
-        写真をタッチすると
-        かわさき夏祭り公式サイトへ移動します。
-
-        ※写真ファイル名が違う場合は
-        kawasaki-summer2026.jpg
-        の部分だけ変更してください。
-      -->
-
-      <a
-        href="https://kawasaki-festival.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="event-image-link"
-      >
-
-        <img
-          src="./kawasaki-summer2026.jpg"
-          alt="かわさき夏祭り2026"
-          class="event-image"
-        >
-
-      </a>
-
-
       <p class="event-date">
         2026年8月15日（土）
       </p>
 
-
       <p class="event-place">
-        川崎B&amp;G
+        川崎町B&amp;G海洋センター
       </p>
-
 
       <p class="event-time">
         16時10分出演予定！
       </p>
 
-    </div>
-
-
-    <!-- =========================
-         一緒に演奏しませんか？
-    ========================= -->
-
-    <div class="welcome-card">
-
-      <p>
-        音楽が好きな方、<br>
-        川崎にゆかりのある方、ない方<br>
-        （大歓迎です！）、<br>
-        一緒に楽しく演奏してみませんか？
-      </p>
-
-
-      <p>
-        興味を持たれた方は、<br>
-        かわさき winds オーケストラ公式<br>
-        アドレスまで<br>
-        お気軽にお問い合わせください。
+      <p class="event-description">
+        かわさき夏祭り2026に出演します。<br>
+        皆さんと一緒に、夏祭りを<br>
+        音楽で盛り上げたいと思います！
       </p>
 
     </div>
@@ -988,7 +839,6 @@ footer p {
         </p>
 
       </div>
-
 
       <div class="card">
 
